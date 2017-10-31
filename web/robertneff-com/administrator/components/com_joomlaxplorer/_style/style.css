@@ -1,0 +1,36 @@
+.rowdata {
+	background-color: #EAECEE;
+}
+
+.rowdatasel {
+	background-color: #D8E1EB;
+}
+
+td.header {
+	background-color: #DDDDDD;
+	vertical-align: middle;
+}
+
+td.title {
+	background-repeat: repeat-x;
+	background-image: url(./tablebg.gif);
+	font-weight: bold;
+	font-size: 13;
+	border-top: solid 1px #000000;
+	border-bottom: solid 1px #000000;
+}
+
+small {
+	font-size: 10;
+}
+
+
+a, a:link, a:visited {
+
+	text-decoration: none;
+}
+
+a:hover, a:active {
+
+	text-decoration: none;
+}

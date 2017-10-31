@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="mambot" group="content">
+	<name>AllVideos Plugin</name>
+	<author>Fotis Evangelou - George Chouliaras (JoomlaWorks)</author>
+	<creationDate>06/10/2006</creationDate>	
+	<copyright>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</copyright>
+	<authorEmail>joomlaworks@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlaworks.gr</authorUrl>
+	<version>2.1</version>
+	<description><![CDATA[
+<style type="text/css" media="all">
+<!--
+.plugin_container {padding:0px 8px 8px 8px;}
+ul {margin:0px;padding:0px;list-style:none;}
+ul li {margin:2px 8px 2px 0px;padding:0px 0px 0px 16px;background:url('../mambots/content/plugin_jw_allvideos/bullet.png') no-repeat;background-position:0px 2px;border-bottom:1px solid #ccc;}
+h1 {clear:both;margin:0px 0px 12px 0px;padding:0px 0px 1px 0px;color:#C64934;font-size:17px;border-bottom:1px dotted #505050;}
+h2 {margin:4px 0px;padding:0px;font-size:14px;}
+-->
+</style>
+<div class="plugin_container">
+  <h1><a target="_blank" title="Visit JoomlaWorks!" href="http://www.joomlaworks.gr">THE ALLVIDEOS PLUGIN v2.0 (by JoomlaWorks.gr)</a></h1>
+  <a title="Visit the official AllVideos Plugin website!" href="http://www.joomlaworks.gr"><img style="float:right;background:#fff;border:1px solid #ccc;padding:2px;margin:0px 0px 2px 8px;" src="../mambots/content/plugin_jw_allvideos/logo.gif" border="0" alt="Logo" /></a>
+  <h2>Brief Intro</h2>
+  Ain't it funny? The AllVideos plugin began as an idea of how to bring all this "video sharing" hype (YouTube, Google Video etc.) to the Joomla! community in an easy manner, combining the most popular video providers, targeted for use by people that did not even know what HTML is! Well, after about 3 months, this 'little' plugin has topped (yes, no.1) the "Top Rated" extensions list at <a target="_blank" title="Joomla! Extensions" href="http://extensions.joomla.org">Joomla! Extensions</a> and has "stuck" :) there! Now, in version 2.0, being much more mature, it has evolved into a full blown all-in-one media (video and audio) management solution for <a target="_blank" title="Visit Joomla!" href="http://www.joomla.org">Joomla!</a> - the world's most popular CMS.<br />
+  <br />
+  <h2>Version 2.0: The all-in-one video management solution</h2>
+  The AllVideos Plugin (by <a target="_blank" title="Visit JoomlaWorks!" href="http://www.joomlaworks.gr">JoomlaWorks.gr</a>) <b>NOW gives you the ability to embed online streaming videos inside your content (items) as well as <u>your own video or audio content that resides on your server</u></b>. That means that you can still use, for example, YouTube to upload your videos and then embed (stream) them inside your site without eating your server's bandwidth or having to spend money on expensive video conversion software! But! You are now able to stream/play any type of video or audio content (yes, you read correctly, any type) using simple tags, from content uploaded onto your server. Nice for quick podcasting, too!<br />
+  <br />
+  So besides being easy, the AllVideos Plugin is smart, cheap and now flexible content streaming for you!<br />
+  <br />
+  <strong style="color:#C64934;">To wrap up the features, on version 2.0 we have</strong>:
+  <ol style="padding:0px;margin:4px 24px;">
+    <li>Over 30 video providers, including regional Google Video websites.</li>
+    <li>Own video or audio content streaming, for every possible media format (.flv, .swf, .mov, .mp4, .wmv, .avi, .mpg, .mpeg, .rm .wma, .mp3 etc.).</li>
+    <li>No "click to activate" problems for IE and Opera users anymore, since an EOLAS patch has been incorporated! Don't know what this is? Check these sites for more: <a target="_blank" href="http://blogs.zdnet.com/BTL/?p=2868">ZDNet</a> and <a target="_blank" href="http://www.eweek.com/article2/0,1895,1895907,00.asp">eWeek</a>.</li>
+    <li>You can use your own "click to play" text or even image logo for Flash Video streaming from your server.</li>
+    <li>Master controls provide layout consistency on all the videos shown in your Joomla! website.</li>
+    <li>A CSS class has been added to manipulate the way videos are displayed through your template's CSS file. Handy for achieving different layouts on different categories/sections.</li>
+    <li>A "master" local video folder for storing your videos and displaying them with simple tags like {flv}my_trip_on_hawaii{/flv}.</li>
+	<li>A "master" local audio folder for storing your audio files and displaying them with simple tags, like {mp3}nadasurf-popular{/mp3}, with additional audio player parameters.</li>
+  </ol>
+  <br />
+  Need we say more?<br />
+  <b>Please read the instructions</b> below to get you started on the all new AllVideos Plugin v2.0! <u>The documentation might seem a little long, but it's worth the time and will save you a lot of questions in forums</u>! So, read on.<br />
+  <br />
+  <i>(This version is compatible to the previous ones, so you won't need to change anything in your content after you install it!)</i> <br />
+  <br />
+  <h1>STREAMING YOUR OWN VIDEO CONTENT FROM YOUR SERVER</h1>
+  In this version, we have made it possible for everyone to simply upload any type of video or audio file on their Joomla! website (via FTP, the Media Manager or a WYSIWYG editor) and directly stream/play these files without the need for a third-party content provider. This option can be helpful for a lot of reasons. For example, imagine a company website that needs to display company videos without any "YouTube" logos! An other possible situation could be the contiguous downtime of some providers which leave you with a blank space in your website. <br />
+  <br />
+  <h2>Supported file formats - USAGE INSTRUCTIONS</h2>
+  You can upload on your Joomla! website almost any type of video format used today on the web. From Windows Media to QuickTime, Flash, DivX or Real Media and of course MP3! To be exact you can stream any of the following file formats with the AllVideos Plugin:
+  <ul style="padding:0px;margin:4px 24px;">
+    <li>.flv (the recommended format)</li>
+    <li>.swf</li>
+    <li>.mov</li>
+    <li>.mp4 (supports both video and audio as a format)</li>
+    <li>.wmv (.asf or .asx are not included since they are considered as "dead" formats)</li>
+    <li>.avi (utilizing any codec, this includes DivX)</li>
+    <li>.mpg and .mpeg</li>
+    <li>.rm (Real Media - supports both video and audio as a format)</li>
+	<li>.mp3</li>
+	<li>.wma</li>
+  </ul>
+  So, how would you add video (or audio) files that you just uploaded to your content, using the AllVideos Plugin? Simple!
+  <br /><br />
+  <u>Let's use an example with videos in particular. Don't worry about audio/music files. The procedure is the same!</u><br />
+  First we setup a "<strong style="color:#C64934;">video folder</strong>" that we store all our videos inside our Joomla! website. By default this folder is called "videos" and resides within images/stories. So the full path to this folder would be <b>images/stories/videos</b>.Say you uploaded 2 videos called <strong style="color:#C64934;">trip_to_paris.flv</strong> and <strong style="color:#C64934;">mariasparty.wmv</strong>. You open up a new or existing content item and simply add <strong style="color:#C64934;">{flv}trip_to_paris{/flv}</strong> and <strong style="color:#C64934;">{wmv}mariasparty{/wmv}</strong>!! Couldn't be more simple, right?<br />
+  <br />
+  <b>Let's have a look at what we did here</b>. We have 2 video files, one is <b>flv</b> type, the other is <b>wmv</b>. We added each video to our content by inserting a "mambot string" of this form:<br />
+  <br />
+  <strong style="color:#C64934;padding:0px 0px 0px 16px;background:url('../mambots/content/plugin_jw_allvideos/bullet.png') no-repeat;background-position:0px 2px;">{video_file_type}video_file_name{/video_file_type}</strong> <br />
+  <br />
+  Notice that we did not include the "video" folder in the mambot strings in the examples above, cause this is already set from the plugin's parameters (on the right of this page). But <b>what do you do when you want to categorize videos into subfolders</b>, within the "master" video folder? Say we wanted to have 2 subfolders on the previous example, "holidays" and "fun", on which we would put <strong style="color:#C64934;">trip_to_paris.flv</strong> and <strong style="color:#C64934;">mariasparty.wmv</strong> respectively. Then the mambot strings inserted into our content items would simply be of this form: <br />
+  <br />
+  <strong style="color:#C64934;padding:0px 0px 0px 16px;background:url('../mambots/content/plugin_jw_allvideos/bullet.png') no-repeat;background-position:0px 2px;">{video_file_type}subfolder/video_file_name{/video_file_type}</strong> <br />
+  <br />
+  So the above files would be inserted with the strings: <br />
+  <br />
+  <strong style="color:#C64934;padding:0px 0px 0px 16px;background:url('../mambots/content/plugin_jw_allvideos/bullet.png') no-repeat;background-position:0px 2px;">{flv}holidays/trip_to_paris{/flv}</strong> and <strong style="color:#C64934;">{wmv}fun/mariasparty{/wmv}</strong> <br />
+  <br />
+  <b>See how easy it is?</b><br />
+  If the case was with audio/music files, we would use something like <strong style="color:#C64934;">{mp3}nadasurf-popular{/mp3}</strong> or <strong style="color:#C64934;">{wma}marilyn_manson_idontlikethedrugs(butthedrugslikeme){/wma}</strong>, cause for audio only .mp3 and .wma are supported.<br />
+  Imagine now that people usually stick to one format when "playing around" with videos (or audio), so it's easy for you to train others (=your customers or friends!) to easily insert video or audio content inside Joomla! content items.<br />
+  <br />
+  <h1>VIDEO CONTENT STREAMING FROM THIRD-PARTY PROVIDERS LIKE YOUTUBE, GOOGLE VIDEO, iFILM ETC.</h1>
+  In this version, the AllVideos Plugin gives you the ability to stream video content from EVEN MORE "third-party" providers like YouTube etc. <b>Supported video providers</b> as of version 2.0 are:
+  <ol style="padding:0px;margin:4px 24px;">
+    <li><a target="_blank" href="http://video.google.com/">Google Video International</a></li>
+    <li><a target="_blank" href="http://video.google.de/">Google Video Deutchland (Germany)</a></li>
+    <li><a target="_blank" href="http://video.google.es/">Google Video Espana (Spain)</a></li>
+    <li><a target="_blank" href="http://video.google.fr/">Google Video France</a></li>
+    <li><a target="_blank" href="http://video.google.it/">Google Video Italia (Italy)</a></li>
+    <li><a target="_blank" href="http://video.google.nl/">Google Video Nederland (The Netherlands/Holland)</a></li>
+    <li><a target="_blank" href="http://video.google.pl/">Google Video Polska (Poland)</a></li>
+    <li><a target="_blank" href="http://video.google.co.uk/">Google Video U.K. (United Kingdom/Great Britain)</a></li>
+    <li><a target="_blank" href="http://www.youtube.com/">YouTube</a></li>
+    <li><a target="_blank" href="http://www.ifilm.com/">iFilm</a></li>
+    <li><a target="_blank" href="http://www.vimeo.com/">Vimeo</a></li>
+    <li><a target="_blank" href="http://www.metacafe.com/">Metacafe</a></li>
+    <li><a target="_blank" href="http://www.bolt.com/">Bolt (for Audio &amp; Video)</a></li>
+    <li><a target="_blank" href="http://www.bofunk.com/">Bofunk</a></li>
+    <li><a target="_blank" href="http://www.break.com/">Break</a></li>
+    <li><a target="_blank" href="http://www.jumpcut.com/">Jumpcut</a></li>
+    <li><a target="_blank" href="http://www.current.tv/">Current TV</a></li>
+    <li><a target="_blank" href="http://www.revver.com/">Revver</a></li>
+    <li><a target="_blank" href="http://www.myvideo.de/">MyVideo.de</a></li>
+    <li><a target="_blank" href="http://www.sevenload.de/">Sevenload.de</a></li>
+    <li><a target="_blank" href="http://www.stickam.com/">Stickam</a></li>
+    <li><a target="_blank" href="http://www.krazyshow.com/">Krazyshow</a></li>
+    <li><a target="_blank" href="http://www.myspacevideocode.com/">MySpace Video Code</a></li>
+    <li><a target="_blank" href="http://www.freevideoblog.com/">FreeVideoBlog</a></li>
+    <li><a target="_blank" href="http://www.streetfire.net/">Streetfire Videos</a></li>
+    <li><a target="_blank" href="http://www.crossroadvideos.com/">Crossroad Videos</a></li>
+    <li><a target="_blank" href="http://www.dropshots.com/">Dropshots</a></li>
+    <li><a target="_blank" href="http://www.uume.com/">UUme</a> (for chinese speaking users)</li>
+    <li><a target="_blank" href="http://www.tudou.com/">Tudou.com</a> (for chinese speaking users)</li>
+    <li><a target="_blank" href="http://www.seehaha.com/">Seehaha</a> (for chinese speaking users)</li>
+    <li><a target="_blank" href="http://www.quxiu.com/">QuXiu</a> (for chinese speaking users)</li>
+    <li><a target="_blank" href="http://v.wangyou.com/">WangYou.com</a> (for chinese speaking users)</li>
+	<li><a target="_blank" href="http://www.mofile.com/">Mofile TV</a> (for chinese speaking users)</li>
+  </ol>
+  These providers offer content in various formats, but most of them use Flash Video technology. <br />
+  <br />
+  <h2>USAGE INSTRUCTIONS (for third-party video providers)</h2>
+  To embed videos to your content use the following <strong>Mambot Strings</strong> per video provider: <br />
+  <br />
+  <ul>
+    <li>For Google Video use: <strong style="color:#C64934;">{google}video_id{/google}</strong><br />
+      For example if the link on your browser displays <b>http://video.google.com/videoplay?docid=-3406925506469882756</b> then your video_id is <strong>-3406925506469882756</strong>, that means the characters that come after "docid=". Please note that in some cases there might be a minus sign (-) before the last sequence of digits or not!</li>
+    <li>For local Google Video sites (like Google Video France) use: <strong style="color:#C64934;">{google.TLD}video_id{/google}</strong> and replace "TLD" with "co.uk", "de", "es", "fr", "it", "nl" or "pl", depending on the local Google Video service. <br />
+      For example if the link on your browser displays <b>http://video.google.fr/videoplay?docid=-3406925506469882756</b> then your video_id is <strong>-3406925506469882756</strong>, that means the characters that come after "docid=". You then write inside the editor: <strong style="color:#C64934;">{google.fr}-3406925506469882756{/google.fr}</strong>. Please note that in some cases there might be a minus sign (-) before the last sequence of digits or not!</li>
+    <li>For YouTube use: <strong style="color:#C64934;">{youtube}video_id{/youtube}</strong><br />
+      For example if the link on your browser displays <b>http://www.youtube.com/watch?v=cdXTDovB9K8</b> then your video_id is <strong>cdXTDovB9K8</strong>, that means, again just the number at the end of the link!</li>
+    <li>For iFilm use: <strong style="color:#C64934;">{ifilm}video_id{/ifilm}</strong><br />
+      For example if the link on your browser displays <b>http://www.ifilm.com/ifilmdetail/2732615</b> then your video_id is <strong>2732615</strong>, that means, yes you've guessed too, just the number at the end of the link!</li>
+    <li>For Vimeo use: <strong style="color:#C64934;">{vimeo}video_id{/vimeo}</strong><br />
+      For example if the link on your browser displays <b>http://www.vimeo.com/clip:78198</b> then your video_id is <strong>78198</strong>, that means, yes you are a genius, again just the number at the end of the link!</li>
+    <li>For Metacafe use: <strong style="color:#C64934;">{metacafe}video_id/video_name{/metacafe}</strong><br />
+      For example if the link on your browser displays <b>http://www.metacafe.com/watch/143709/i_get_knocked_down/</b> then your video_id/video_name is <strong>143709/i_get_knocked_down</strong>. That is a tricky one because you need to ommit the last slash (/)! Be careful with this one!</li>
+    <li> For <b>Bolt Video</b> use: <strong style="color:#C64934;">{boltvideo}video_id{/boltvideo}</strong><br />
+      For example if the link on your browser displays <b>http://www.bolt.com/wakey1989/video/1293961?cn=HUBS_video_new_all_PAGE1</b> then your video_id is <strong>1293961</strong>.<br />
+      For <b>Bolt Audio</b> (music) use: <strong style="color:#C64934;">{boltaudio}video_id{/boltaudio}</strong><br />
+      For example if the link on your browser displays <b>http://www.bolt.com/MeLo-X/audio/1214080?cn=FEATURED_audio_PAGE1</b> then your video_id is <strong>1214080</strong>.</li>
+    <li>For Bofunk use: <strong style="color:#C64934;">{bofunk}video_id{/bofunk}</strong><br />
+      For example if the link on your browser displays <b>http://www.bofunk.com/video/3466/he_thinks_he_can_sing.html</b> then your video_id is <strong>3466</strong>. Bofunk uses ASX files to stream content.</li>
+    <li>For Break use: <strong style="color:#C64934;">{break}video_name{/break}</strong><br />
+      For example if the link on your browser displays <b>http://www.break.com/index/rally41.html</b> then your video_name is <strong>rally41</strong>. Break uses Windows Media Video (WMV) to stream content.</li>
+    <li>For Jumpcut use: <strong style="color:#C64934;">{jumpcut}video_id{/jumpcut}</strong><br />
+      For example if the link on your browser displays <b>http://www.jumpcut.com/view?id=E227D48AF9B111DABAF94E6A17CD0207</b> then your video_id is <strong>E227D48AF9B111DABAF94E6A17CD0207</strong>.</li>
+    <li>For Current TV use: <strong style="color:#C64934;">{currenttv}video_id{/currenttv}</strong><br />
+      For example if the link on your browser displays <b>http://www.current.tv/studio/media/2144246</b> then your video_id is <strong>2144246</strong>.</li>
+    <li>For Revver use: <strong style="color:#C64934;">{revver}video_id{/revver}</strong><br />
+      For example if the link on your browser displays <b>http://www.revver.com/video/29572/</b> then your video_id is <strong>29572</strong>. Revver uses Quicktime (MOV) to stream content.</li>
+    <li>For MyVideo.de use: <strong style="color:#C64934;">{myvideo}video_id{/myvideo}</strong><br />
+      For example if the link on your browser displays <b>http://www.myvideo.de/watch/17290</b> then your video_id is <strong>17290</strong>.</li>
+    <li>For Sevenload.de use: <strong style="color:#C64934;">{sevenload}video_id{/sevenload}</strong><br />
+      For example if the link on your browser displays <b>http://sevenload.de/videos/ZHNTpBZ</b> then your video_id is <strong>ZHNTpBZ</strong>.</li>
+    <li>For Stickam use: <strong style="color:#C64934;">{stickam}video_id{/stickam}</strong><br />
+      For example if the link on your browser displays <b>http://www.stickam.com/editMediaComment.do?method=load&mId=174010582</b> then your video_id is <strong>174010582</strong>.</li>
+    <li>For Krazyshow use: <strong style="color:#C64934;">{krazyshow}video_id{/krazyshow}</strong><br />
+      For example if the link on your browser displays <b>http://www.krazyshow.com/media/playvideo.aspx?f=flash7&cid=AF8BCC6F96F04A4ABECBED7B6EC738F9</b> then your video_id is <strong>AF8BCC6F96F04A4ABECBED7B6EC738F9</strong> (after &cid).</li>
+    <li>For MySpace Video Code use: <strong style="color:#C64934;">{myspacevideocode}video_id{/myspacevideocode}</strong><br />
+      For example if the link on your browser displays <b>http://www.myspacevideocode.com/v-3673-afternoon-delight.php</b> then your video_id is <strong>3673</strong>.</li>
+    <li>For FreeVideoBlog use: <strong style="color:#C64934;">{freevideoblog}video_id{/freevideoblog}</strong><br />
+      For example if the link on your browser displays <b>http://video.freevideoblog.com/video/06d6ce03-a0db-44e5-9afd-cb51fab7215d.htm</b> then your video_id is <strong>06d6ce03-a0db-44e5-9afd-cb51fab7215d</strong>.</li>
+    <li>For Streetfire Videos use: <strong style="color:#C64934;">{streetfire}video_id{/streetfire}</strong><br />
+      For example if the link on your browser displays <b>http://videos.streetfire.net/video/cf324233-408a-4e93-8c02-29147e71ab0e.htm</b> then your video_id is <strong>cf324233-408a-4e93-8c02-29147e71ab0e</strong>.</li>
+    <li>For Crossroad Videos use: <strong style="color:#C64934;">{crossroad}video_id{/crossroad}</strong><br />
+      For example if the link on your browser displays <b>http://www.crossroadvideos.com/video/2fabf084-ef82-4e63-a094-c8a9d1a2ad76.htm</b> then your video_id is <strong>2fabf084-ef82-4e63-a094-c8a9d1a2ad76</strong>.</li>
+    <li>For Dropshots use: <strong style="color:#C64934;">{dropshots}browser_link{/dropshots}</strong><br />
+      For Dropshots we use the whole browser link, for example <b>http://www.dropshots.com/day.php?userid=127444&amp;cdate=20060612&amp;ctime=050513</b>, because this is the easiest way to embed video. You see, Dropshots uses variables inside the link that would otherwise need to be "found" inside the browser link. And our "motto" for the plugin is "no HTML-hassle" at all! So using some extra PHP code, we "clean up" the link and embed the variables correctly in Joomla's content. So all you have to do is just paste the whole link and that's it!</li>
+    <li>For UUme use: <strong style="color:#C64934;">{uume}video_id{/uume}</strong><br />
+      For example if the link on your browser displays <b>http://www.uume.com/play_0p7PhcCcJ2ra</b> then your video_id is <strong>0p7PhcCcJ2ra</strong>.</li>
+    <li>For Tudou.com use: <strong style="color:#C64934;">{tudou}video_id{/tudou}</strong><br />
+      For example if the link on your browser displays <b>http://www.tudou.com/programs/view/T7tcywVL8P0/</b> then your video_id is <strong>T7tcywVL8P0</strong>.</li>
+    <li>For Seehaha use: <strong style="color:#C64934;">{seehaha}video_id{/seehaha}</strong><br />
+      For example if the link on your browser displays <b>http://www.seehaha.com/play/19787</b> then your video_id is <strong>19787</strong>.</li>
+    <li>For QuXiu use: <strong style="color:#C64934;">{quxiu}video_id{/quxiu}</strong><br />
+      For example if the link on your browser displays <b>http://www.quxiu.com/mov/V12285.htm</b> then your video_id is <strong>12285</strong> (without the 'V').</li>
+    <li>For WangYou.com use: <strong style="color:#C64934;">{wangyou}video_id{/wangyou}</strong><br />
+      For example if the link on your browser displays <b>http://v.wangyou.com/play.php?id=1773127</b> then your video_id is <strong>1773127</strong>.</li>
+	<li>For Mofile TV use: <strong style="color:#C64934;">{mofile}video_id{/mofile}</strong><br />
+      For example if the link on your browser displays <b>http://tv.mofile.com/QM66Q9O8/</b> then your video_id is <strong>QM66Q9O8</strong>.</li>
+  </ul>
+  <br />
+  <br />
+  <h1>TIPS FOR BETTER USAGE (regarding third-party or own videos)</h1>
+  Keep in mind that <strong>when you choose to adjust the width and height of your videos</strong> (through the plugin's parameters) it is best to maintain a 4:3 aspect ratio and add about 5% to 6% (5,75% to be exact) of your target width to your <strong>height</strong> (for the video controls, like play, pause etc.) so that your video will not stretch and look ugly! <b>Pay attention to this, as you will only do it once</b>!<br />
+  <br />
+  So, for example, if you choose to have a width of 600px, then your height should be (600 x 3/4)px + (600 x 5,75%)px = 485px. But keeping it at the default 400px width and 323px height, will suit most people's needs, since this dimension is similar to the dimensions of the original online videos!<br />
+  <br />
+  <b>In most cases you need to have a consistent look for the videos on your site</b>. That is why AllVideos utilizes a "master" width and height for all videos except for iFilm and Metacafe, that can be "problematic". Having a "master" width and height for all videos also means less clutter in the bot's admin panel (in Mambots >> Site Mambots >> AllVideos). iFilm and Metacafe are "problematic" because they use flash menus that are not hidden, e.g. if you increase the width of an iFilm video you will "discover" all the menus used for user interaction! So we have assigned seperate widths and heights for these two providers so that you will not have to experiment with inbetween values of width and height!<br />
+  Well? What are you waiting for? Go post a ton of videos on your site!<br />
+  <br />
+  <h1>Use Flash Video in your website! How? Encode your videos with the free RIVA FLV ENCODER</h1>
+  The <a target="_blank" href="http://rivavx.de/?encoder">Riva FLV Encoder</a> is the best video encoder at the moment for converting most popular video formats to Flash Video (.flv) format, the widely used and soon-to-become industry standard solution for video distribution on the web! At present you can transcode the following formats: AVI, MPEG, Quicktime, WMV. Make sure you visit the <a target="_blank" href="http://rivavx.de">Riva</a> website to learn more about this excellent tool, provided for free. <br />
+  <br />
+  <h1>CREDITS</h1>
+  The development of the new AllVideos Plugin would not be possible if these two people hadn't done such a remarkable work! <br />
+  <br />
+  We refer to <a target="_blank" title="Visit Jeroen Wijering's website!" href="http://www.jeroenwijering.com/">Jeroen Wijering</a> for his great work on the <a target="_blank" href="http://www.jeroenwijering.com/?item=Flash_Video_Player">Flash Video Player</a> and the <a target="_blank" href="http://www.jeroenwijering.com/?item=Flash_MP3_Player">Flash MP3 Player</a> (both licensed under a <b>Creative Commons License</b>), the best FLV/MP3 players on the web. The AllVideos Plugin v2.0 incorporates Jeroen Wijering's "Flash Video Player" for FLV playback (utilizing almost all of its advanced features) and "Flash MP3 Player" for MP3 playback.<br />
+  <br />
+  The second person is <a target="_blank" href="http://www.gerozahn.de/">Gero Zahn</a>, whose ingenious <a href="http://www.gerozahn.de/bot_gznoclicktoactivate/">bot_gzNoClickToActivate</a> Joomla! plugin (released under the <b>GNU/GPL</b> license) has been incorporated to the AllVideos Plugin v2.0, as the best "EOLAS patch" solution around the web. <br />
+  <br />
+  We sincerely thank these two people for their contributions to the Open Source Software community. <br />
+  <br />
+  Credits also go to the people that downloaded over 30.000 times the AllVideos Plugin (v1.0.x) and made it the no.1 "top rated" Joomla! extension. A sincere "thank you" to all these people! <br />
+  <br />
+  <h1>FOR INFO, UPDATES, REQUESTS &amp; CONTACT</h1>
+  Check out <a target="_blank" title="Visit JoomlaWorks!" href="http://www.joomlaworks.gr">JoomlaWorks.gr</a>, the official website of this Joomla extension and home to other popular ones, like the <b>AJAX Newsflash Module</b>, the <b>Ultimate PNG Fix Plugin</b> or the <b>Tabs In Content Items Plugin</b>.<br />
+  <br />
+  <a target="_blank" title="Visit JoomlaWorks!" href="http://www.joomlaworks.gr">JoomlaWorks.gr</a> is <u>the</u> place to read interesting articles or find useful tips and tutorials for the Joomla! CMS and web design/development in general. At <a target="_blank" title="Visit JoomlaWorks!" href="http://www.joomlaworks.gr">JoomlaWorks.gr</a> you can always download the latest software updates as well as post comments, requests or even discuss the extension.<br />
+  <br />
+  Please show your support by rating or commenting on this extension at the official Joomla! Extensions website <a href="http://extensions.joomla.org/component/option,com_mtree/task,viewlink/link_id,812/Itemid,35/">HERE</a>. <br />
+  <br />
+  <b>Thank you for your support!</b><br />
+  <br />
+  <strong style="color:#C64934;">This extension is released under the GNU/GPL license.</strong><br /><br />
+  <i>(Last update: October 6th, 2006 - version 2.1)</i><br />
+  <br />
+</div>
+	]]>
+	</description>
+	<params>
+		<param name="allvideos_css" type="text" default="allvideos" size="40" label="CSS Class for container div" description="Set here the CSS class that you want to use with the container div surrounding all videos displayed through the AllVideos Plugin. You can freely use a CSS class already contained in your template file, so this option can be very helpful." />	
+		<param name="top_margin" type="text" default="8" size="5" label="Top margin (px)" description="Top margin between your content and the video." />
+		<param name="bottom_margin" type="text" default="8" size="5" label="Bottom margin (px)" description="Bottom margin between the video and your content." />
+		<param name="video_align" type="list" default="center" size="5" label="Video alignment" description="Align the video horizontally.">
+		<option value="center">Center</option>
+		<option value="left">Left</option>
+		<option value="right">Right</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="width" type="text" default="400" size="5" label="Master Video width (px)" description="The preselected width of the video in pixels to show inside your content, it should me smaller than the width of the surrounding box -if any- in order not to break your layout!" />
+		<param name="height" type="text" default="323" size="5" label="Master Video height (px)" description="The preselected height of the video in pixels to show inside your content, it should maintain an analogy of 4:3 for width:height so that the image will not be stretched or squizzed!" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="ifilmwidth" type="text" default="400" size="5" label="iFilm Video width (px)" description="The preselected width of the iFilm video in pixels to show inside your content, it should me smaller than the width of the surrounding box -if any- in order not to break your layout!" />
+		<param name="ifilmheight" type="text" default="323" size="5" label="iFilm Video height (px)" description="The preselected height of the iFilm video in pixels to show inside your content, it should maintain an analogy of 4:3 for width:height so that the image will not be stretched or squizzed!" />		
+		<param name="metacafewidth" type="text" default="400" size="5" label="Metacafe Video width (px)" description="The preselected width of the Metacafe video in pixels to show inside your content, it should me smaller than the width of the surrounding box -if any- in order not to break your layout!" />
+		<param name="metacafeheight" type="text" default="323" size="5" label="Metacafe Video height (px)" description="The preselected height of the Metacafe video in pixels to show inside your content, it should maintain an analogy of 4:3 for width:height so that the image will not be stretched or squizzed!" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="video_folder" type="text" default="images/stories/videos/" size="40" label="Local Video Folder" description="This is the folder where you store all the video files that you want to stream/play from YOUR website. It is better if this folder is inside the 'images/stories' folder, so that you won't stumble into any permission issues. In this Local Video Folder you can then upload any video file type you can imagine (.flv, .swf, .mov, .wmv, .avi, .mpg etc.)!" />
+		<param name="video_clicktext" type="text" default="Click to watch the video!" size="40" label="Local Video 'Click to watch' text" description="Write some text that users will see before the video starts playing." />		
+		<param name="video_transparency" type="list" default="transparent" label="Local Video Transparency?" description="Should the background of the video be transparent or not?">
+			<option value="transparent">yes</option>
+			<option value="opaque">no</option>
+		</param>
+		<param name="video_bg" type="text" default="#FFFFFF" size="6" label="Local Video background color" description="Set the background color for the local video player only if the transparency is OFF. Values should be given in HEX (hexadecimal) format." />
+		<param name="video_image" type="text" default="somefolder/image.jpg" size="40" label="Local Video Preview Image" description="Use a JPG image as a preview, before the videos starts playing. For example you can use your logo or some image with a message to your visitors! Make sure this image is at least the size of the video." />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="audio_folder" type="text" default="images/stories/audio/" size="40" label="Local Audio Folder" description="This is the folder where you store all the audio (sound) files that you want to stream/play from YOUR website. It is better if this folder is inside the 'images/stories' folder, so that you won't stumble into any permission issues. In this Local Audio Folder you can then upload .mp3 and .wma audio file types!" />
+		<param name="awidth" type="text" default="300" size="5" label="Master Audio Player width (px)" description="The preselected width of the audio player in pixels to show inside your content, it should me smaller than the width of the surrounding box -if any- in order not to break your layout!" />
+		<param name="aheight" type="text" default="60" size="5" label="Master Audio Player (px)" description="The preselected height of the audio player in pixels to show inside your content, it should me smaller than the width of the surrounding box -if any- in order not to break your layout!" />
+	</params>
+	<files>
+		<filename mambot="plugin_jw_allvideos">plugin_jw_allvideos.php</filename>
+		<filename mambot="plugin_jw_allvideos">plugin_jw_allvideos/logo.gif</filename>
+		<filename mambot="plugin_jw_allvideos">plugin_jw_allvideos/gz_eolas_fix.js</filename>
+		<filename mambot="plugin_jw_allvideos">plugin_jw_allvideos/jw_allvideos_player.swf</filename>
+		<filename mambot="plugin_jw_allvideos">plugin_jw_allvideos/jw_allvideos_aplayer.swf</filename>
+		<filename mambot="plugin_jw_allvideos">plugin_jw_allvideos/bullet.png</filename>
+	</files>
+</mosinstall>

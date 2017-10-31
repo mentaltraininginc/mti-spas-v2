@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: normal;
+	height: 20px;
+	padding: 0px;
+}
+
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333333;
+}
+body {
+	background-image: url(images/bkg.jpg);
+	background-position:center;
+	background-repeat: repeat-y;
+	margin-left: 0px;
+	margin-top: 15px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+p {
+	line-height:20px;
+}
+
+a:link {
+	color: #cbac00;
+	text-decoration: none;
+}
+a:visited {
+	color: #999999;
+	text-decoration: none;
+}
+a:hover {
+	color: #999999;
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+
+/*Dropdown CSS ---------------------------------------------------------------- */
+
+.selectedanchor{ /*CSS class that gets added to the currently selected anchor link (assuming it's a text link)*/
+background: ;
+}
+
+/* ######### Default class for drop down menus ######### */
+
+.anylinkmenu{
+position: absolute;
+left: 0;
+top: 0;
+visibility: hidden;
+border: 1px solid black;
+border-bottom-width: 1px;
+font: normal 12px Verdana;
+line-height: 18px;
+z-index: 100; /* zIndex should be greater than that of shadow's below */
+background: #333333;
+width: 138px; /* default width for menu */
+}
+
+.anylinkmenu ul{
+margin: 0;
+padding: 10px;
+list-style-type: none;
+}
+
+.anylinkmenu ul li a{
+width: 100%;
+display: block;
+padding-top: 10px;
+padding-bottom:10px;
+border-bottom: 1px solid black;
+text-decoration: none;
+font-weight: bold;
+text-indent: 0px;
+}
+
+.anylinkmenu a:hover{ /*hover background color*/
+color: white;
+}
+
+/* ######### Alternate multi-column class for drop down menus ######### */
+
+
+.anylinkmenucols{
+position: absolute;
+width: 350px;
+left: 0;
+top: 0;
+visibility: hidden;
+border: 1px solid black;
+padding: 10px;
+font: normal 12px Verdana;
+z-index: 100; /*zIndex should be greater than that of shadow's below*/
+background: #E9E9E9;
+}
+
+.anylinkmenucols li{
+padding-bottom: 3px;
+}
+
+.anylinkmenucols .column{
+float: left;
+padding: 3px 8px;
+margin-right: 5px;
+background: #E0E0E0;
+}
+
+.anylinkmenucols .column ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+
+
+/* ######### class for shadow DIV ######### */
+
+
+.anylinkshadow{ /*CSS for shadow. Keep this as is */
+position: absolute;
+left: 0;
+top: 0;
+z-index: 99; /*zIndex for shadow*/
+background: black;
+visibility: hidden;
+}

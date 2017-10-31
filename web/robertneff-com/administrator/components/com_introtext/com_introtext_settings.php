@@ -1,0 +1,3 @@
+<?php
+$catIntroText = "14";
+?>

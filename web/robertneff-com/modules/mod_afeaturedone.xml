@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="module" version="1.0.3">
+	<name>A Featured Module</name>
+	<author>rabencor</author>
+	<creationDate>October 2005</creationDate>
+	<copyright>(C) 2005 Joomgets.com - All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>joomgets@gmail.com</authorEmail>
+	<authorUrl>www.joomgets.com</authorUrl>
+	<version>0.8</version>
+	<description>This module will display box with an image, link or text, as a featured thing.</description>
+	<files>
+		<filename module="mod_afeaturedone">mod_afeaturedone.php</filename>
+	</files>
+	<params>
+		<param name="img" type="text" default="" label="Image Path:" description="Path of the image in the form: /pathoftheimage/image" size="30"/>
+		<param name="imgw" type="text" default="" label="Image Width:" description="The image's width is autodetected but you can force it using this parameter" size="10"/>
+		<param name="imgh" type="text" default="" label="Image Height:" description="The image's height is autodetected but you can force it using this parameter" size="10"/>
+		<param name="@spacer" type="spacer" default="" label="" description=""/>
+		<param name="link" type="radio" default="1" label="Display a link under the image?" description="Select yes if you want to place a link under the image.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="link_txt" type="text" default="" label="Link Text" description="Text for the link..." size="40"/>
+		<param name="link_url" type="text" default="" label="Link URL" description="URL of the link..." size="40"/>
+		<param name="link_window" type="radio" default="1" label="Open Link in new window?" description="Select yes if you want the link to open in a new window.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description=""/>
+		<param name="text" type="radio" default="1" label="Display a text under the image?" description="Select yes if you want to place some text under the image by filling parameters below.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="text_txt" type="textarea" default="" label="Text:" description="Text to show under the image." rows="4" cols="45"/>
+		<param name="@spacer" type="spacer" default="" label="" description=""/>
+		<param name="frame" type="radio" default="1" label="Display a frame around the content?" description="Select yes to display a frame around the whole content.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="framew" type="text" default="" label="Frame Width:" description="Width for the frame." size="10"/>
+		<param name="framebg" type="text" default="" label="Frame Background Color:" description="Background color of the frame, use HEX format: #000000" size="10"/>
+		<param name="framebw" type="text" default="" label="Frame Border Width:" description="Will display a border around the frame, set to 0 for no border." size="5"/>
+		<param name="framebcolor" type="text" default="" label="Frame Border Color:" description="You can set the color of the frame's border, use HEX format: #000000" size="10"/>
+	</params>
+</mosinstall>

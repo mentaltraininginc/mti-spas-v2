@@ -1,0 +1,76 @@
+/*
+Style sheet for bsq_sitestats
+*/
+
+.bsq_reporttable
+{
+}
+
+.bsq_reportheaderrow
+{
+}
+
+.bsq_reportheadercol 
+{
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+	border-bottom: 1px solid #000000;
+}
+
+.bsq_reportrow
+{
+}
+
+.bsq_reportcol
+{
+    padding-right: 5px;
+}
+
+a.bsq_reportcol
+{
+    color: #000000;
+}
+
+a.bsq_reportcol:hover
+{
+    color: #444444;
+}
+
+/* Site stat summary stuff */
+.bsq_ssscom_table
+{
+    width: 200px;
+    position: center;
+}
+
+.bsq_ssscom_topheading
+{	
+	font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+	border-bottom: 1px solid #000000;
+}
+
+.bsq_ssscom_firstcol
+{
+    width: 80px;
+    font-size: 14px;
+	text-align: right;
+	padding-right: 5px;
+}
+
+.bsq_ssscom_col
+{
+    font-size: 14px;
+	text-align: center;
+}
+
+.bsq_ssscom_heading_col
+{
+    font-size: 16px;
+    width: 60px;
+	text-align: center;
+	text-decoration: underline;
+}
+

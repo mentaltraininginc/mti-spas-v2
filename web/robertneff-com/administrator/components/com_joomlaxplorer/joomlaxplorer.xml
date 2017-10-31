@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<mosinstall type="component">
+    <name>joomlaXplorer</name>
+    <creationDate>July 2005</creationDate>
+    <author>QuiX Project; Soeren Eberhardt</author>
+    <copyright>QuiX Project, Adaption for joomla: Soeren Eberhardt</copyright>
+    <authorEmail>soeren@joomla-phpshop.net</authorEmail>
+    <authorUrl>www.joomlaforge.net/projects/joomlaxplorer</authorUrl>
+    <version>1.2.1</version>
+    <description><![CDATA[
+	<div align="left"><img src="components/com_joomlaxplorer/_img/logo.png"  /></div>
+	<h2>Successfully installed joomlaXplorer&nbsp;</h2>
+	joomlaXplorer is a cute but powerful FileManagement script. 
+	<br/>It allows 
+	  <ul>
+	  <li>Browsing Directories & Files,</li>
+	  <li>Editing, Copying, moving and deleting files,</li>
+	  <li>Searching, Uploading and downloading files,</li>
+	  <li>Creating new files and directories,</li>
+	  <li>Changing file permissions (chmod)</li></ul><br/>and many more.<br/><br/>
+	  <strong>By default restricted to Superadministrators only!</strong>
+	]]></description>
+    <install/>
+    <uninstall/>	
+    <installfile>install.joomlaxplorer.php</installfile>
+    <administration>
+        <menu>joomlaXplorer</menu>
+        <files>
+		  <filename>admin.joomlaxplorer.php</filename>
+		  <filename>CHANGELOG.txt</filename>
+		  <filename>index.html</filename>
+		  <filename>LICENSE</filename>
+		  <filename>README.txt</filename>
+		  <filename>RELEASE.txt</filename>
+		  <filename>.config/.htaccess</filename>
+		  <filename>.config/.htusers.php</filename>
+		  <filename>.config/conf.php</filename>
+		  <filename>.config/index.html</filename>
+		  <filename>.config/mimes.php</filename>
+		  <filename>.include/.htaccess</filename>
+		  <filename>.include/error.php</filename>
+		  <filename>.include/footer.php</filename>
+		  <filename>.include/fun_admin.php</filename>
+		  <filename>.include/fun_archive.php</filename>
+		  <filename>.include/fun_chmod.php</filename>
+		  <filename>.include/fun_copy_move.php</filename>
+		  <filename>.include/fun_del.php</filename>
+		  <filename>.include/fun_down.php</filename>
+		  <filename>.include/fun_edit.php</filename>
+		  <filename>.include/fun_extra.php</filename>
+		  <filename>.include/fun_list.php</filename>
+		  <filename>.include/fun_mkitem.php</filename>
+		  <filename>.include/fun_search.php</filename>
+		  <filename>.include/fun_system_info.php</filename>
+		  <filename>.include/fun_up.php</filename>
+		  <filename>.include/fun_users.php</filename>
+		  <filename>.include/header.php</filename>
+		  <filename>.include/index.html</filename>
+		  <filename>.include/init.php</filename>
+		  <filename>.include/javascript.php</filename>
+		  <filename>.include/js_admin.php</filename>
+		  <filename>.include/js_admin2.php</filename>
+		  <filename>.include/js_admin3.php</filename>
+		  <filename>.include/login.php</filename>
+		  <filename>_img/cpp.png</filename>
+		  <filename>_img/css.png</filename>
+		  <filename>_img/dir.png</filename>
+		  <filename>_img/exe.png</filename>
+		  <filename>_img/file.png</filename>
+		  <filename>_img/flash.png</filename>
+		  <filename>_img/h.png</filename>
+		  <filename>_img/html.png</filename>
+		  <filename>_img/image.png</filename>
+		  <filename>_img/index.html</filename>
+		  <filename>_img/java.png</filename>
+		  <filename>_img/js.png</filename>
+		  <filename>_img/logo.gif</filename>
+		  <filename>_img/logo.png</filename>
+		  <filename>_img/logo_joomlax.png</filename>
+		  <filename>_img/joomlax_icon.png</filename>
+		  <filename>_img/midi.png</filename>
+		  <filename>_img/mp3.png</filename>
+		  <filename>_img/pdf.png</filename>
+		  <filename>_img/php.png</filename>
+		  <filename>_img/pl.png</filename>
+		  <filename>_img/real.png</filename>
+		  <filename>_img/sound.png</filename>
+		  <filename>_img/spread.png</filename>
+		  <filename>_img/src.png</filename>
+		  <filename>_img/systeminfo.png</filename>
+		  <filename>_img/tar.png</filename>
+		  <filename>_img/tgz.png</filename>
+		  <filename>_img/txt.png</filename>
+		  <filename>_img/video.png</filename>
+		  <filename>_img/word.png</filename>
+		  <filename>_img/zip.png</filename>
+		  <filename>_img/_.gif</filename>
+		  <filename>_img/_admin.gif</filename>
+		  <filename>_img/_archive.png</filename>
+		  <filename>_img/_arrowdown.gif</filename>
+		  <filename>_img/_arrowup.gif</filename>
+		  <filename>_img/_chmod.png</filename>
+		  <filename>_img/_copy.png</filename>
+		  <filename>_img/_copy_.png</filename>
+		  <filename>_img/_delete.png</filename>
+		  <filename>_img/_delete_.png</filename>
+		  <filename>_img/_download.png</filename>
+		  <filename>_img/_download_.png</filename>
+		  <filename>_img/_edit.png</filename>
+		  <filename>_img/_edit_.png</filename>
+		  <filename>_img/_home.png</filename>
+		  <filename>_img/_info.png</filename>
+		  <filename>_img/_logout.gif</filename>
+		  <filename>_img/_move.png</filename>
+		  <filename>_img/_move_.png</filename>
+		  <filename>_img/_refresh.png</filename>
+		  <filename>_img/_search.png</filename>
+		  <filename>_img/_up.png</filename>
+		  <filename>_img/_upload.png</filename>
+		  <filename>_img/_upload_.png</filename>
+		  <filename>_img/__copy.png</filename>
+		  <filename>_img/__cut.png</filename>
+		  <filename>_img/__paste.png</filename>
+		  <filename>_lang/brazilian_portuguese.php</filename>
+		  <filename>_lang/brazilian_portuguese_mimes.php</filename>
+		  <filename>_lang/greek.php</filename>
+		  <filename>_lang/greek_mimes.php</filename>
+		  <filename>_lang/hungarian.php</filename>
+		  <filename>_lang/hungarian_mimes.php</filename>
+		  <filename>_lang/dutch.php</filename>
+		  <filename>_lang/dutch_mimes.php</filename>
+		  <filename>_lang/english.php</filename>
+		  <filename>_lang/english_mimes.php</filename>
+		  <filename>_lang/french.php</filename>
+		  <filename>_lang/french_mimes.php</filename>
+		  <filename>_lang/germanf.php</filename>
+		  <filename>_lang/germanf_mimes.php</filename>
+		  <filename>_lang/germani.php</filename>
+		  <filename>_lang/germani_mimes.php</filename>
+		  <filename>_lang/index.html</filename>
+		  <filename>_lang/russian.php</filename>
+		  <filename>_lang/russian_mimes.php</filename>
+		  <filename>_lang/spanish.php</filename>
+		  <filename>_lang/spanish_mimes.php</filename>
+		  <filename>_lang/finnish.php</filename>
+		  <filename>_lang/finnish_mimes.php</filename>
+		  <filename>_lang/portuguese.php</filename>
+		  <filename>_lang/portuguese_mimes.php</filename>
+		  <filename>_lang/traditional_chinese.php</filename>
+		  <filename>_lang/traditional_chinese_mimes.php</filename>
+		  <filename>_lang/turkish.php</filename>
+		  <filename>_lang/turkish_mimes.php</filename>
+		  <filename>_lang/_info.php</filename>
+		  <filename>_lib/index.html</filename>
+		  <filename>_lib/lib_zip.php</filename>
+		  <filename>_lib/PEAR.php</filename>
+		  <filename>_lib/Tar.php</filename>
+		  <filename>_style/index.html</filename>
+		  <filename>_style/sleight.js</filename>
+		  <filename>_style/sleightbg.js</filename>
+		  <filename>_style/style.css</filename>
+		  <filename>_style/tablebg.gif</filename>
+        </files>
+    </administration>
+</mosinstall>

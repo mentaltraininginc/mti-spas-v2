@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="module" version="1.0.3">
+	<name>Image Fade Slideshow :: DHTML</name>
+	<author>rabencor</author>
+	<creationDate>October 2005</creationDate>
+	<copyright>(C) 2005 Joomgets.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>joomgets@gmail.com</authorEmail>
+	<authorUrl>www.joomgets.com</authorUrl>
+	<version>0.6</version>
+	<description>This module will display a random serie of images, fade slideshow (fade effect only in IE). Based on a DynamicDrive script.</description>
+	<files>
+		<filename module="mod_imageslide">mod_imageslide.php</filename>
+	</files>
+	<params>
+		<param name="imgfolder" type="text" default="" label="Images' Folder" description="Path to the images' folder, /imagesfolder/" size="30"/>
+		<param name="img1" type="text" default="" label="Image 01" description="Image 01, add file name with extension." size="30"/>
+		<param name="link1" type="text" default="" label="Image URL 01" description="URL where the image 01 goes... ( format: www.thesite.com)" size="50"/>
+		<param name="img2" type="text" default="" label="Image 02" description="Image 02, add file name with extension." size="30"/>
+		<param name="link2" type="text" default="" label="Image URL 02" description="URL where the image 02 goes... ( format: www.thesite.com)" size="50"/>
+		<param name="img3" type="text" default="" label="Image 03" description="Image 03, add file name with extension." size="30"/>
+		<param name="link3" type="text" default="" label="Image URL 03" description="URL where the image 03 goes... ( format: www.thesite.com)" size="50"/>
+		<param name="img4" type="text" default="" label="Image 04" description="Image 04, add file name with extension." size="30"/>
+		<param name="link4" type="text" default="" label="Image URL 04" description="URL where the image 04 goes... ( format: www.thesite.com)" size="50"/>
+		<param name="img5" type="text" default="" label="Image 05" description="Image 05, add file name with extension." size="30"/>
+		<param name="link5" type="text" default="" label="Image URL 05" description="URL where the image 05 goes... ( format: www.thesite.com)" size="50"/>
+		<param name="@spacer" type="spacer"/>
+		<param name="imgw" type="text" default="" label="Image Width" description="Set image width, required for working" size="10"/>
+		<param name="imgh" type="text" default="" label="Image Height" description="Set image height, required for working" size="10"/>
+		<param name="@spacer" type="spacer"/>
+		<param name="frameimg" type="radio" default="1" label="Display a bordered frame around images?" description="Select yes to display a frame around the images">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="framewidth" type="text" default="" label="Frame Width" description="Frame Width in px" size="10"/>
+		<param name="frameborder" type="text" default="" label="Frame Border Width" description="Frame border's width, set to 0 for none" size="10"/>
+		<param name="framebcolor" type="text" default="" label="Frame Border Color" description="Frame border's color, in HEX format: #000000" size="10"/>
+		<param name="@spacer" type="spacer"/>
+		<param name="ss_speed" type="text" default="" label="Slide Show Speed (miliseconds)" description="Controls the speed of the slide show" size="10"/>
+		<param name="link_open" type="radio" default="1" label="Open links in a new window?" description="Select yes if you want image links to open in new window">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</mosinstall>

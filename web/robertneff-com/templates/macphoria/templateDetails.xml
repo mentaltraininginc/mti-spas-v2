@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall version="4.5.3" type="template">
+    <name>md_macphoria</name>
+    <version>1.0.1</version>
+    <creationDate>04/28/05</creationDate>
+    <author>rhuk</author>
+    <authorEmail>rhuk@mambodev.com</authorEmail>
+    <authorUrl>http://www.mambodev.com</authorUrl>
+    <copyright>Copyright 2005 - Mambodev.com</copyright>
+    <license></license>
+    <description>md_macphoriais the March 2005 template for the MamboDev template club.  It is not free or public.  This is template is for members of the MamboDev Template Club only.</description>
+    <files>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>images/arrow.png</filename>
+        <filename>images/indent1.png</filename>
+        <filename>images/indent2.png</filename>
+        <filename>images/indent3.png</filename>
+        <filename>images/indent4.png</filename>
+        <filename>images/mp_content_bottom.png</filename>
+        <filename>images/mp_content_middle.png</filename>
+        <filename>images/mp_content_top.png</filename>
+        <filename>images/mp_footer_seperator.png</filename>
+        <filename>images/mp_header.jpg</filename>
+        <filename>images/mp_header_bottom.png</filename>
+        <filename>images/mp_line_grey.png</filename>
+        <filename>images/mp_menu_active_bg.png</filename>
+        <filename>images/mp_menu_cap_l.png</filename>
+        <filename>images/mp_menu_cap_r.png</filename>
+        <filename>images/mp_menu_normal_bg.png</filename>
+        <filename>images/mp_menu_seperator.png</filename>
+        <filename>images/mp_readon.png</filename>
+        <filename>images/mp_right_block1_b.png</filename>
+        <filename>images/mp_right_block1_m.png</filename>
+        <filename>images/mp_right_block1_t.png</filename>
+        <filename>images/mp_right_block2_b.png</filename>
+        <filename>images/mp_right_block2_m.png</filename>
+        <filename>images/mp_right_block2_t.png</filename>
+        <filename>images/mp_shadow_b.png</filename>
+				<filename>images/mp_shadow_l.png</filename>
+				<filename>images/mp_shadow_l_b.png</filename>
+				<filename>images/mp_shadow_l_t.png</filename>
+				<filename>images/mp_shadow_r.png</filename>
+				<filename>images/mp_shadow_r_b.png</filename>
+				<filename>images/mp_shadow_r_t.png</filename>
+				<filename>images/mp_shadow_t.png</filename>
+				<filename>images/mp_spacer_white.png</filename>
+		    <filename>images/spacer.png</filename>
+        <filename>css/index.html</filename>
+        <filename>css/template_css.css</filename>
+    </files>
+    <params />
+</mosinstall>

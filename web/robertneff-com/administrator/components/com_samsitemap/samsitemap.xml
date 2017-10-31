@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<mosinstall type="component" version="4.5.1">
+  <name>samSiteMap</name>
+  <creationDate>09.29.2005</creationDate>
+  <author>Steve Graham</author>
+  <copyright>Copyright 2005 by Steve Graham, SAM Code Team. Released under the GNU GPL.</copyright>
+  <authorEmail>steve@mlshomequest.com</authorEmail>
+  <authorUrl>http://coders.mlshomequest.com</authorUrl>
+  <version>.6.2 beta</version>
+  <description>samSiteMap creates Complex Document Trees for Joomla! and Mambo websites.</description>
+  <params>
+  </params>
+  <files>
+    <filename>samsitemap.php</filename>
+    <filename>samsitemap_classes.php</filename>
+    <filename>index.html</filename>
+    <filename>lang/samsitemap.lang.en_us.php</filename>
+    <filename>lang/samsitemap.lang.french.php</filename>
+    <filename>lang/samsitemap.lang.catalan.php</filename>
+    <filename>lang/samsitemap.lang.spanish.php</filename>
+    <filename>lang/samsitemap.lang.croatian.php</filename>
+    <filename>lang/samsitemap.lang.german.php</filename>
+    <filename>lang/samsitemap.lang.finnish.php</filename>
+    <filename>lang/index.html</filename>
+    <filename>icons/index.html</filename>
+    <filename>icons/default/index.html</filename>
+    <filename>samsitemap.license.txt</filename>
+  </files>
+
+  <images>
+    <filename>icons/default/nafolder.png</filename>
+    <filename>icons/default/napage.png</filename>
+    <filename>icons/default/page.png</filename>
+    <filename>icons/default/folder.png</filename>
+  </images>
+  <install>
+    <queries>
+        <query>DROP TABLE IF EXISTS `#__samsitemap_indexes`;</query>
+        <query>
+            CREATE TABLE `#__samsitemap_indexes` (
+              `id` int(13) NOT NULL auto_increment,
+              `name` tinytext NOT NULL,
+              `title` tinytext NOT NULL,
+              `search_title` tinytext NOT NULL,
+              `itemid` varchar(13) NOT NULL default '0',
+              `params` text NOT NULL,
+              `description` text NOT NULL,
+              `checked_out` tinyint(4) NOT NULL default '0',
+              `co_uid` int(13) NOT NULL default '0',
+              PRIMARY KEY `id` (`id`),
+              KEY `itemid` (`itemid`)
+            ) TYPE=MyISAM AUTO_INCREMENT=3;
+        </query>
+        <query>
+         INSERT INTO `#__samsitemap_indexes` (`id`, `name`, `title`, `search_title`, `itemid`, `params`, `description`, `checked_out`, `co_uid`) VALUES (1, '', '', '', '', 'pad=10\ndesc_len=250\nusecache=0\nnoauth=1\nshowself=1\nmenutitles=1\ndesc=1\nicons=1\nshowempty=1\nmultirender=1\nview=map\nsort=normal\nshowmenu=1\nsearch_ok=1\nshowview=1\nshowsearch=1\nshowsort=1\nratingsort=1\nshowdesc=1\nexp_sections=1\nexp_categories=1\nexp_content=1\nexp_nf_cat=1\nexp_newsfeeds=1\nexp_wl_cat=1\nexp_weblinks=1\nexp_ct_cat=1\nexp_contacts=1', 'sr_show_hl=1\nsr_search_clr=red\nsr_title_hl=1\nsr_search_bld=1\nsr_desc_len=350\nsr_sho_wc=1\nsr_sho_rtng=1\nsr_maxdens=7\nsr_densw=10\nsr_allw=1\nsr_titlew=5', 0, 0),
+         (2, '', '', '', '', 'useconfig=0\npospri=\nusecache=111\nnoauth=111\nshowself=111\nmenutitles=111\ndesc=111\nicons=111\nshowempty=111\nmultirender=111\nview=111\nsort=111\nshowmenu=111\nsearch_ok=111\nshowview=111\nshowsearch=111\nshowsort=111\nratingsort=111\nshowdesc=111\nexp_sections=111\nexp_categories=111\nexp_content=111\nexp_nf_cat=111\nexp_newsfeeds=111\nexp_wl_cat=111\nexp_weblinks=111\nexp_ct_cat=111\nexp_contacts=111', '', 0, 0);
+            </query>
+        <query>DROP TABLE IF EXISTS `#__samsitemap_items`;</query>
+        <query>
+            CREATE TABLE `#__samsitemap_items` (
+              `id` int(13) NOT NULL auto_increment,
+              `parent` int(13) default NULL,
+              `ordering` int(13) NOT NULL default '0',
+              `itemid` int(13) default NULL,
+              `linkto` int(13) NOT NULL default '0',
+              `config_id` int(13) NOT NULL default '0',
+              `smtype` tinytext NOT NULL,
+              `componentid` int(13) NOT NULL default '0',
+              PRIMARY KEY  (`id`)
+            ) TYPE=MyISAM AUTO_INCREMENT=1;
+        </query>
+    </queries>
+  </install>
+  <uninstall>
+    <query>DELETE * FROM `#__samsitemap_indexes`</query>
+    <query>DROP TABLE `#__samsitemap_indexes`</query>
+    <query>DELETE * FROM `#__samsitemap_items`</query>
+    <query>DROP TABLE `#__samsitemap_items`</query>
+  </uninstall>
+    <installfile>install.samsitemap.php</installfile>
+    <uninstallfile>uninstall.samsitemap.php</uninstallfile>
+  <administration>
+    <menu>samSiteMap</menu>
+    <files>
+        <filename>admin.samsitemap.classes.php</filename>
+        <filename>admin.samsitemap.php</filename>
+        <filename>install.samsitemap.php</filename>
+        <filename>toolbar.samsitemap.html.php</filename>
+        <filename>toolbar.samsitemap.php</filename>
+        <filename>uninstall.samsitemap.php</filename>
+        <filename>admin.samsitemap.html.php</filename>
+        <filename>admin.samsitemap.help.htm.php</filename>
+        <filename>samsitemap.license.txt</filename>
+        <filename>index.html</filename>
+        <filename>lang/admin.samsitemap.lang.en_us.php</filename>
+        <filename>lang/index.html</filename>
+    </files>
+    <images>
+    </images>
+</administration>
+</mosinstall>

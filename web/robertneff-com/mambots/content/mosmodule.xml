@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall version="4.5.1" type="mambot" group="content">
+  <name>MosModule</name>
+  <creationDate>2005-10-14</creationDate>
+  <author>Chanh Ong</author>
+  <copyright>(C) 2003-2013 Chanh Ong</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <authorEmail>chanh.ong@gmail.com</authorEmail>
+  <authorUrl>OngETC.com</authorUrl>
+  <version>1.02</version>
+  <description>Using {mosmodule list} to show in content (see readme)</description>
+  <files>
+    <filename mambot="mosmodule">mosmodule/mosmodule.inc.php</filename>
+    <filename mambot="mosmodule">mosmodule/modulebot.inc.php</filename>
+    <filename mambot="mosmodule">mosmodule/readme.txt</filename>
+    <filename mambot="mosmodule">modulebot.php</filename>
+    <filename mambot="mosmodule">mosmodule.php</filename>
+  </files>
+  <params />
+</mosinstall>

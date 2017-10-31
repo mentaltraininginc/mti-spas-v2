@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #999;
+}
+body {
+	background-color: #333333;
+	background-image: url(../images/bkg-vert.jpg);
+	background-position:top;
+	background-repeat:no-repeat;
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+h1  {
+	font-family: Arial Black, Arial, sans-serif;
+	font-size:24px;
+	color:#F1D823;
+	letter-spacing:-1px;
+	padding-top:20px;
+}
+p  {
+	line-height:1.6em;
+	font-size:.9em;
+}
+#bold  {
+	font-family: Arial Black, Arial, sans-serif;
+	font-size:20px;
+	color:#efefef;
+	letter-spacing:-1px;
+}
+#bold2  {
+	font-family: Arial Black, Arial, sans-serif;
+	font-size:20px;
+	color:#CCCCCC;
+	letter-spacing:-1px;
+}
+#callout  {
+	font-family:  Arial, sans-serif;
+	font-size:20px;
+	color:#efefef;
+	letter-spacing:-1px;
+}
+#footer {
+	background-image:url(../images/footer-bkg.jpg);
+	background-position:top;
+	background-repeat:no-repeat;
+	height:111px;
+	padding:40px;
+}
+#content {
+	background-image: url(../images/content-top.jpg);
+	background-repeat:no-repeat;
+	background-position:top;
+	padding-left:30px;
+	padding-right:30px;
+}
+a:link {
+	color: #F1D823;
+}
+a:visited {
+	color: #F1D823;
+}

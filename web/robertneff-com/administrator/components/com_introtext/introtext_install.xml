@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<mosinstall type="component">
+<name>IntroText</name>
+<creationDate>01/02/2005</creationDate>
+<author>Barbara Irene Meclazcke</author>
+<copyright>This component is released under the GNU/GPL License</copyright>
+<authorEmail>aclaina@yahoo.com.ar</authorEmail>
+<authorUrl>ewriting.com.ar</authorUrl>
+<version>1.0</version>
+<description>IntroText - Intro Text Linked to Menues</description>
+
+<install>
+	<queries>
+		<query>DROP TABLE IF EXISTS `mos_introtext_link`;</query>
+		<query>CREATE TABLE `mos_introtext_link` (
+				`id` int(11) NOT NULL auto_increment,
+				`namelink` varchar(25) default NULL,
+				`contentid` int(11) unsigned NOT NULL, 
+				`menuid` int(11) NOT NULL,
+				`enabled` tinyint(1) NOT NULL default '1',
+          		UNIQUE KEY `id`(`id`)
+         		) TYPE=MyISAM;
+		</query>
+	</queries>
+</install>
+
+<installfile>install.introtext.php</installfile>
+
+<uninstall>
+	<queries>
+		<query>DROP TABLE IF EXISTS `mos_introtext_link`;</query>		
+    </queries>
+</uninstall>
+
+<administration>
+	<menu>IntroText</menu>
+	<files>
+		<filename>admin.introtext.php</filename>
+		<filename>admin.introtext.html.php</filename>
+		<filename>com_introtext_settings.php</filename>		
+		<filename>README.txt</filename>
+		<filename>language/english.php</filename>
+		<filename>language/spanish.php</filename>
+	</files>
+	<images>
+		<filename>images/back.png</filename>
+		<filename>images/config.gif</filename>
+		<filename>images/delete.gif</filename>
+		<filename>images/edit.gif</filename>
+		<filename>images/gohome.png</filename>
+		<filename>images/header.gif</filename>
+		<filename>images/introlink.gif</filename>
+		<filename>images/new.gif</filename>		
+	</images>
+</administration>
+
+</mosinstall>

@@ -1,0 +1,11 @@
+<?php
+defined('_VALID_MOS') or die('Direct Access to this location is not allowed.'); 
+
+define ('AN_TEST_REQUEST', 'TRUE');
+define ('AN_LOGIN', 'mentaltrai6982');
+define ('AN_TYPE', 'AUTH_CAPTURE');
+define ('AN_CHECK_CARD_CODE', 'NO');
+define ('AN_VERIFIED_STATUS', 'P');
+define ('AN_INVALID_STATUS', 'P');
+define ('AN_RECURRING', 'YES');
+?>

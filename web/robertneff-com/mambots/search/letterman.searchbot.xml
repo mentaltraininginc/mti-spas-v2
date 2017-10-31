@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall version="1.0.0" type="mambot" group="search">
+	<name>Letterman searchbot</name>
+	<author>Soern</author>
+	<creationDate>02.07.2006</creationDate>
+	<copyright>(C) 2006 soeren</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>soeren@virtuemart.net</authorEmail>
+	<authorUrl>http://virtumart.net</authorUrl>
+	<version>1.2.3</version>
+	<description>Allows Searching of all Newsletter items</description>
+	<files>
+		<filename mambot="letterman.searchbot">letterman.searchbot.php</filename>
+	</files>
+	<params>
+		<param name="search_limit" type="text" size="5" default="50" label="Search Limit" description="Number of Search items to return" />		
+	</params>
+</mosinstall>

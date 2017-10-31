@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="module" version="4.5.1">
+<name>MosCmenuTree</name>
+<creationDate>10/29/2005</creationDate>
+<author>Chanh Ong</author>
+<copyright>(C) 2004 - 2013 OngETC</copyright>
+<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+<authorEmail>chanh.ong@gmail.com</authorEmail>
+<authorUrl>ongetc.com</authorUrl>
+<version>1.09</version>
+<description>Content Menu Tree (Readme.txt for more detail), created by Chanh Ong</description>
+    <files>
+	<filename module="mod_clo">mod_clo.php</filename>
+	<filename>mod_clo/mod_clo.class.php</filename>
+	<filename>mod_clo/cotoolkit.php</filename>
+	<filename>mod_clo/dtree.js</filename>
+	<filename>mod_clo/dtree.css</filename>
+	<filename>mod_clo/readme.txt</filename>
+    </files>
+    <images>
+	<filename>mod_clo/images/barrow.gif</filename>
+	<filename>mod_clo/images/karrow.gif</filename>
+	<filename>mod_clo/images/oarrow.gif</filename>
+	<filename>mod_clo/images/rarrow.gif</filename>
+	<filename>mod_clo/images/tarrow.gif</filename>
+	<filename>mod_clo/images/uarrow.gif</filename>
+	<filename>mod_clo/images/varrow.gif</filename>
+	<filename>mod_clo/images/warrow.gif</filename>
+	<filename>mod_clo/images/xarrow.gif</filename>
+	<filename>mod_clo/images/zarrow.gif</filename>
+	<filename>mod_clo/images/new.gif</filename>
+	<filename>mod_clo/images/upd.gif</filename>
+	<filename>mod_clo/img/base.gif</filename>
+	<filename>mod_clo/img/cd.gif</filename>
+	<filename>mod_clo/img/empty.gif</filename>
+	<filename>mod_clo/img/folder.gif</filename>
+	<filename>mod_clo/img/folderopen.gif</filename>
+	<filename>mod_clo/img/globe.gif</filename>
+	<filename>mod_clo/img/imgfolder.gif</filename>
+	<filename>mod_clo/img/join.gif</filename>
+	<filename>mod_clo/img/joinbottom.gif</filename>
+	<filename>mod_clo/img/line.gif</filename>
+	<filename>mod_clo/img/minus.gif</filename>
+	<filename>mod_clo/img/minusbottom.gif</filename>
+	<filename>mod_clo/img/musicfolder.gif</filename>
+	<filename>mod_clo/img/nolines_minus.gif</filename>
+	<filename>mod_clo/img/nolines_plus.gif</filename>
+	<filename>mod_clo/img/page.gif</filename>
+	<filename>mod_clo/img/plus.gif</filename>
+	<filename>mod_clo/img/plusbottom.gif</filename>
+	<filename>mod_clo/img/question.gif</filename>
+	<filename>mod_clo/img/trash.gif</filename>
+    </images>
+    <params>
+	<param name="secid" type="text" default="1" 
+	   label="Sect ID" description="Section ID ex: 1,2" />
+	<param name="catid" type="text" default="" 
+	   label="Cat ID" description="Category ID ex: 1,2" />
+	<param name="showupdated" type="text" default="" 
+	   label="Show Updated" description="Show Updated Article Within number of days.  Ex: 14" />
+	<param name="ltype" type="list" default="tree" 
+	   label="Tree Type" description="Display content using">
+		<option value="tree">tree</option>
+		<option value="dropdown">dropdown</option>
+		<option value="bycat">bycat</option>
+		<option value="list">list</option>
+	</param>
+	<param name="orderby" type="list" default="id" 
+	  label="Order by" description="Order by">
+		<option value="id">id</option>
+		<option value="name">name</option>
+	</param>
+	<param name="basetext" type="text" default="" 
+		label="Basetext" 
+		description="If Base=text, specify the text to use" />
+	<param name="separator" type="text" default="" 
+		label="Separator" 
+		description="By default a moduleheading is shown (if Show title=yes in the module config), it can be set to other HTML code" />
+	<param name="openAll" type="radio" default="0" 
+		label="openAll" 
+		description="By default a menu tree is shown with all folders closed, except the one of the selected node. With this parameter all folders are open. Overrides closeSameLevel" >
+		<option value="1">True</option>
+		<option value="0">False</option>
+	</param>
+	<param name="useSelection" type="radio" default="1" 
+		label="useSelection" 
+		description="Nodes can be selected(highlighted)." >
+		<option value="1">True</option>
+		<option value="0">False</option>
+	</param>
+	<param name="useLines" type="radio" default="1" 
+		label="useLines" 
+		description="Tree is drawn with lines." >
+		<option value="1">True</option>
+		<option value="0">False</option>
+	</param>
+	<param name="useIcons" type="radio" default="1" 
+		label="useIcons" 
+		description="Tree is drawn with icons." >
+		<option value="1">True</option>
+		<option value="0">False</option>
+	</param>
+	<param name="useStatusText" type="radio" default="0" 
+		label="useStatusText" 
+		description="Displays node names in the statusbar instead of the url." >
+		<option value="1">True</option>
+		<option value="0">False</option>
+	</param>
+	<param name="closeSameLevel" type="radio" default="0" 
+		label="closeSameLevel" 
+		description="Only one node within a parent can be expanded at the same time." >
+		<option value="1">True</option>
+		<option value="0">False</option>
+	</param>  
+	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+	<param name="itemid" type="text" default="" 
+	   label="Item ID" description="Menu Item ID ex: 159,160" />
+    </params>
+    <EXTRAparams>
+    </EXTRAparams>
+</mosinstall>

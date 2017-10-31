@@ -1,0 +1,152 @@
+                      1833193093a:2:{s:6:"output";s:6183:"			<div class="componentheading">
+			--------------------			</div>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="contentpane">
+		<tr>
+			<td width="60%" valign="top" class="contentdescription" colspan="2">
+							<img src="http://www.robertneff.com/images/stories/lebron_cnn.jpg" align="right" hspace="6" alt="lebron_cnn.jpg" />
+				<h1>Testimonials </h1> <h4>Over the past 12 years, we have received literally hundreds of letters and emails from past clients, but most ask to remain anonymous. Because of the personal nature of any work involving people&#39;s preparation and performance, we are careful to keep our clients&#39; information private. We have presented below a few letters from past and current clients who agreed to attach their names. We of course are very appreciative of all feedback, even the criticisms we receive from time to time. We know people have invested their time to let us (and others) know how they feel about the services we provide. Hopefully you&#39;ll find these helpful as you explore who we are and what we do. <br /></h4>			</td>
+		</tr>
+		<tr>
+			<td>
+					<form action="index.php?option=com_content&amp;task=category&amp;sectionid=4&amp;id=1&amp;order=rdate&amp;Itemid=5" method="post" name="adminForm">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td colspan="4">
+				<table>
+				<tr>
+											<td align="right" width="100%" nowrap="nowrap">
+						Filter&nbsp;						<input type="text" name="filter" value="" class="inputbox" onchange="document.adminForm.submit();" />
+						</td>
+												<td align="right" width="100%" nowrap="nowrap">
+						&nbsp;&nbsp;&nbsp;Order&nbsp;
+<select name="order" class="inputbox" size="1"  onchange="document.adminForm.submit();">
+	<option value="alpha">Title asc</option>
+	<option value="ralpha">Title desc</option>
+	<option value="hits">Hits asc</option>
+	<option value="rhits">Hits desc</option>
+	<option value="order">Ordering</option>
+</select>
+						</td>
+												<td align="right" width="100%" nowrap="nowrap">
+						&nbsp;&nbsp;&nbsp;Display #&nbsp;
+<select name="limit" class="inputbox" size="1" onchange="document.location.href='index.php?option=com_content&amp;task=category&amp;sectionid=4&amp;id=1&amp;order=rdate&amp;Itemid=5&amp;limit=' + this.options[selectedIndex].value + '&amp;limitstart=0';">
+	<option value="5">5</option>
+	<option value="10">10</option>
+	<option value="15">15</option>
+	<option value="20">20</option>
+	<option value="25">25</option>
+	<option value="30">30</option>
+	<option value="50" selected="selected">50</option>
+</select>
+						</td>
+										</tr>
+				</table>
+			</td>
+		</tr>
+					<tr>
+									<td class="sectiontableheader" width="45%">
+					Item Title					</td>
+										<td align="center" class="sectiontableheader" width="5%">
+					Hits					</td>
+								</tr>
+						<tr class="sectiontableentry1" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=120&amp;Itemid=5">
+						"My Daughter Has Benefited in Her Sport and Life"						</a>
+												</td>
+											<td align="center">
+					4629					</td>
+						</tr>
+					<tr class="sectiontableentry2" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=119&amp;Itemid=5">
+						14 Year Old Tennis Player Reaches Top 40						</a>
+												</td>
+											<td align="center">
+					5180					</td>
+						</tr>
+					<tr class="sectiontableentry1" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=118&amp;Itemid=5">
+						Soccer Player Learns to Perform Despite the Coach						</a>
+												</td>
+											<td align="center">
+					4210					</td>
+						</tr>
+					<tr class="sectiontableentry2" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=117&amp;Itemid=5">
+						"My Handicap Decreased by Seven Strokes!"						</a>
+												</td>
+											<td align="center">
+					4105					</td>
+						</tr>
+					<tr class="sectiontableentry1" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=116&amp;Itemid=5">
+						Wide Receiver's Confidence Soars						</a>
+												</td>
+											<td align="center">
+					4209					</td>
+						</tr>
+					<tr class="sectiontableentry2" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=115&amp;Itemid=5">
+						Success Transitioning to College Level						</a>
+												</td>
+											<td align="center">
+					3878					</td>
+						</tr>
+					<tr class="sectiontableentry1" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=114&amp;Itemid=5">
+						"My Son Can Control His Emotions Now"						</a>
+												</td>
+											<td align="center">
+					4935					</td>
+						</tr>
+					<tr class="sectiontableentry2" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=40&amp;Itemid=5">
+						"I Would Highly Recommend Dr. Neff"						</a>
+												</td>
+											<td align="center">
+					4498					</td>
+						</tr>
+					<tr class="sectiontableentry1" >
+										<td>
+						<a href="index.php?option=com_content&amp;task=view&amp;id=1&amp;Itemid=5">
+						"I Learned How to Enter the Zone"						</a>
+												</td>
+											<td align="center">
+					4869					</td>
+						</tr>
+					<tr>
+				<td colspan="4">&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center" colspan="4" class="sectiontablefooter">
+				<span class="pagenav">&lt;&lt; Start</span> <span class="pagenav">&lt; Prev</span> <span class="pagenav">1</span> <span class="pagenav">Next &gt;</span> <span class="pagenav">End &gt;&gt;</span>				</td>
+			</tr>
+			<tr>
+				<td colspan="4" align="right">
+				Results 1 - 9 of 9				</td>
+			</tr>
+							</table>
+		<input type="hidden" name="id" value="1" />
+		<input type="hidden" name="sectionid" value="4" />
+		<input type="hidden" name="task" value="category" />
+		<input type="hidden" name="option" value="com_content" />
+		</form>
+					</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+						</td>
+		</tr>
+		</table>
+					<div class="back_button">
+			<a href='javascript:history.go(-1)'>
+			[ Back ]			</a>
+			</div>
+			";s:6:"result";N;}

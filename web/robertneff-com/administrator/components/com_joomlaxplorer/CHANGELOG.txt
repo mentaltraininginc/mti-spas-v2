@@ -1,0 +1,24 @@
+Changelog for joomlaXplorer
+
+Version 1.2
+************
+
+- bug fix: [#4944] joomlaXplorer strips \r\n to just rn
+- added Unzip / Unarchive Feature (Feature Request #6171)
+  to unpack archive types: zip, gz, bz2
+  directly on your webspace.
+- fix for the PNG Fix.
+
+--- version 1.2a released ---
+
+- new language variables + more languages
+- nice X - Icon for components Menu. thanks to Michael!
+- added PNG transparency fix for IE
+- added Owner / Group information to File List
+- bug fix: "$ok @cmod" changed to "$ok = @chmod"
+
+--- version 1.2 released ---
+- removed full path from Archive ( tar.gz /bzip2 Archive Creation)
+- added ability to change permissions recursiveley through all subdirectories
+
+--- version 1.1 released ---

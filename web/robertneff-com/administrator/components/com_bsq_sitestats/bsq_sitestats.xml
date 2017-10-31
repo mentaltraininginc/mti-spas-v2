@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<mosinstall type="component">
+  <name>bsq_sitestats</name>
+  <creationDate>2005-12-26</creationDate>
+  <author>Brent Stolle</author>
+  <copyright>Brent Stolle</copyright>
+  <authorEmail>dev@bs-squared.com</authorEmail>
+  <authorUrl>http://www.bs-squared.com/mambo/index.php</authorUrl>
+  <version>1.7.1</version>
+  <description>BSQ Sitestats</description>
+  <files>
+    <filename>bsqtemplateinc.php</filename>
+    <filename>language/english.php</filename>
+	<filename>language/dutch.php</filename>
+	<filename>language/germani.php</filename>
+	<filename>language/germanf.php</filename>
+	<filename>language/norwegian.php</filename>
+	<filename>language/russian.php</filename>
+    <filename>cache/bogusfile</filename>
+	<filename>graphimg/index.htm</filename>
+	<filename>bsq_sitestats.php</filename>
+	<filename>bsq_sitestats.html.php</filename>
+	<filename>bsq_sitestats.css</filename>
+  </files>
+  <images>
+  </images>
+  <installfile>install.bsq_sitestats.php</installfile>
+  <uninstall>
+  </uninstall>
+  <administration>
+    <menu>BSQ Sitestats</menu>
+    <submenu>
+	  <menu act="showstats">Show Stats</menu>
+      <menu act="config">Configuration</menu>
+	  <menu act="iplookup">IP Lookup</menu>
+	  <menu act="compress">Compress Logs</menu>
+	  <menu act="doiptocountry">Convert IPs to Countries</menu>
+	  <menu act="recreateiptocountry">Import Countries</menu>
+      <menu act="help">Help</menu>
+      <menu act="about">About</menu>
+    </submenu>
+    <files>
+      <filename>admin.bsq_sitestats.class.php</filename>
+      <filename>admin.bsq_sitestats.html.php</filename>
+      <filename>admin.bsq_sitestats.php</filename>
+      <filename>config.bsq_sitestats.php</filename>
+      <filename>toolbar.bsq_sitestats.html.php</filename>
+      <filename>toolbar.bsq_sitestats.php</filename>
+	  <filename>bsqglobals.inc.php</filename>
+	  <filename>filecache/index.htm</filename>
+	  <filename>classes/bsqtabbedreport.class.php</filename>
+	  <filename>classes/bsqgraph.class.php</filename>
+	  <filename>classes/bsqfilecache.class.php</filename>
+	  <filename>classes/bsqstatcompress.class.php</filename>
+	  <filename>classes/bsqcache.class.php</filename>
+	  <filename>classes/bsqfetchdata.php</filename>
+	  <filename>classes/bsqsitestatsrender.php</filename>
+	  <filename>classes/bsqip2country.php</filename>
+	  <filename>classes/bsqlookups.php</filename>
+	  <filename>classes/bsqdatetime.class.php</filename>
+	  <filename>classes/bsqip2city.class.php</filename>
+	  <filename>cache/bogusfile</filename>
+	  <filename>cron/bsqcronstatcompress.php</filename>
+    </files>
+</administration>
+</mosinstall>

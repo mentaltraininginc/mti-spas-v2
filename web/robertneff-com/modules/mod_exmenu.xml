@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="module" version="4.5.2">
+	<name>Extended Menu</name>
+	<author>Daniel Ecer</author>
+	<creationDate>May 2005</creationDate>
+	<copyright>(C) 2005 Daniel Ecer</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>de.siteof.de</authorUrl>
+	<version>0.2.0</version>
+	<description>Displays a menu.</description>
+	<files>
+		<filename module="mod_exmenu">mod_exmenu.php</filename>
+	</files>
+	<params>
+		<param name="class_sfx" type="text" default="" label="Menu Class Suffix" description="A suffix to be applied to the css class of the menu items" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="cache" type="radio" default="0" label="Enable Cache" description="Select whether to cache the content of this module">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="menutype" type="mos_menu" default="" label="Menu Name" description="The name of the menu (default is 'mainmenu')" />
+		<param name="menu_style" type="list" default="vert_indent" label="Menu Style" description="The menu style">
+			<option value="vert_indent">Vertical</option>
+			<option value="horiz_flat">Horizontal</option>
+			<option value="list_flat">Flat List</option>
+			<option value="list_tree">Tree List</option>
+			<option value="html_tree">HTML Tree</option>
+			<option value="css_tree">CSS Tree</option>
+		</param>
+		<param name="menu_images" type="radio" default="0" label="Show Menu Icons" description="Show the Menu Icons you have selected for your menu items">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="menu_images_align" type="radio" default="0" label="Menu Icon Alignment" description="Alignment of the Menu Icons">
+			<option value="0">Left</option>
+			<option value="1">Right</option>
+		</param>
+		<param name="expand_menu" type="radio" default="0" label="Expand Menu" description="Expand the menu and make its sub-menus items always visible">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="expand_min" type="text" default="" label="Expand Until Level" description="All menu items until the given level will always be expanded." />
+		<param name="max_depth" type="text" default="10" label="Maximum Depth" description="Levels with a level higher than the maximum depth will never be expanded." />
+		<param name="hide_first" type="radio" default="0" label="Hide First Entry" description="The first menu item will not be rendered. (This is useful when setting the first entry to what your home page should be, but you dont want it to show.)">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="level_begin" type="text" default="" label="Begin With Level" description="Begins with a certain level/level - useful to split menu into different modules." />
+		<param name="split_menu" type="text" default="" label="Split Menu" description="The amount of levels/depth until a new menu within this module will be rendered." />
+		<param name="menu_count" type="text" default="1" label="Menu Count" description="The amount of menus to render within this module." />
+		<param name="query_cache" type="radio" default="0" label="Enable Query Cache" description="Select whether to cache the query of this module (may be useful for menus splitted into modules)">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="parse_access_key" type="list" default="3" label="Parse Access Key" description="Defines how to parse/strip the access key markup.">
+			<option value="0">None</option>
+			<option value="1">Parse</option>
+			<option value="2">Strip</option>
+			<option value="3">Strip Markup</option>
+			<option value="4">Strip And Emphase</option>
+		</param>
+		<param name="title_attribute" type="radio" default="0" label="Link Title" description="A title attribute may be added to links (useful in combination to show the access key).">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="level_class" type="list" default="0" label="Level Class" description="Defines which level class should be applied (mainlevel/sublevel).">
+			<option value="0">Default</option>
+			<option value="3">Mainlevel and Sublevel</option>
+		</param>
+		<param name="active_menu_class" type="radio" default="0" label="Active Menu Class" description="Active menus may get the style class mainlevel_active/sublevel_active.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="element_id" type="radio" default="0" label="Element Id" description="Each element may get an id based on the hierarchy... for example menuitem_2_5 for the 5th sub menu item of the 2nd menu item. (Note: this conflicts with the active_menu id which will removed... use the above setting instead)">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="menu_template" type="radio" default="1" label="Enable Menu Template" description="Enable Menu Template (patTemplate).">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="menu_template_name" type="text" default="menu.html" label="Template Name" description="The patTemplate template to use (need to be in the current site templates directory)." />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="indent_image" type="list" default="0" label="Indent Image" description="Choose which indent image system to utilise">
+			<option value="0">Template</option>
+			<option value="1">Mambo default images</option>
+			<option value="2">Use params below</option>
+			<option value="3">None</option>
+		</param>
+		<param name="indent_image1" type="imagelist" directory="/images/M_images" default="" label="Indent Image 1" description="Image for the first sub-level" />
+		<param name="indent_image2" type="imagelist" directory="/images/M_images" default="" label="Indent Image 2" description="Image for the second sub-level" />
+		<param name="indent_image3" type="imagelist" directory="/images/M_images" default="" label="Indent Image 3" description="Image for the third sub-level" />
+		<param name="indent_image4" type="imagelist" directory="/images/M_images" default="" label="Indent Image 4" description="Image for the fourth sub-level" />
+		<param name="indent_image5" type="imagelist" directory="/images/M_images" default="" label="Indent Image 5" description="Image for the fifth sub-level" />
+		<param name="indent_image6" type="imagelist" directory="/images/M_images" default="" label="Indent Image 6" description="Image for the sixth sub-level" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="spacer" type="text" default="" size="5" label="Spacer" description="Spacer for Horizontal menu" />
+		<param name="end_spacer" type="text" default="" size="5" label="End Spacer" description="End Spacer for Horizontal menu" />
+	</params>
+</mosinstall>
