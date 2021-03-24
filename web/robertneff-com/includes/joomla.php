@@ -60,7 +60,7 @@ if (version_compare( phpversion(), '5.0' ) < 0) {
 	require_once( dirname( __FILE__ ) . '/compat.php50x.php' );
 }
 
-@set_magic_quotes_runtime( 0 );
+// @set_magic_quotes_runtime( 0 );
 
 if (@$mosConfig_error_reporting === 0) {
 	error_reporting( 0 );
