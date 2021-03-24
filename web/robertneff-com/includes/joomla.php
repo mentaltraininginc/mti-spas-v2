@@ -3452,7 +3452,7 @@ class mosMambotHandler {
 	function call( $event ) {
 		$doUnpublished=false;
 
-		$args =& func_get_args();
+		$args = func_get_args();
 		array_shift( $args );
 
 		if (isset( $this->_events[$event] )) {
