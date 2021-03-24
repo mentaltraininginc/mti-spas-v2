@@ -53,7 +53,7 @@
                 <option value="_blank">{$lang_insert_link_target_blank}</option>
 				<script language="javascript">
 					var html = "";
-					var targets = tinyMCE.getParam('theme_advanced_link_targets', '').split(';');
+					var targets = tinyMCE.getParam('theme_advanced_link_targets', '').preg_split(';');
 
 					for (var i=0; i<targets.length; i++) {
 						var key, value;
@@ -61,8 +61,8 @@
 						if (targets[i] == "")
 							continue;
 
-						key = targets[i].split('=')[0];
-						value = targets[i].split('=')[1];
+						key = targets[i].preg_split('=')[0];
+						value = targets[i].preg_split('=')[1];
 
 						html += '<option value="' + value + '">' + key + '</option>';
 					}

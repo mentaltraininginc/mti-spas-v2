@@ -1,7 +1,7 @@
 <?php
 defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.' );
 // needed to seperate the ISO number from the language file constant _ISO
-$iso = split( '=', _ISO );
+$iso = preg_split( '=', _ISO );
 // xml prolog
 echo '<?xml version="1.0" encoding="'. $iso[1] .'"?' .'>';
 ?>

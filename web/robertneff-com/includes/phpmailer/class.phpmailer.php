@@ -1108,7 +1108,7 @@ class mosPHPMailer
 		switch(strtolower($encoding)) {
 		  case "base64":
 			  // chunk_split is found in PHP >= 3.0.6
-			  $encoded = chunk_split(base64_encode($str), 76, $this->LE);
+			  $encoded = chunk_preg_split(base64_encode($str), 76, $this->LE);
 			  break;
 		  case "7bit":
 		  case "8bit":
@@ -1168,7 +1168,7 @@ class mosPHPMailer
 		$encoding = 'B';
 		$encoded = base64_encode($str);
 		$maxlen -= $maxlen % 4;
-		$encoded = trim(chunk_split($encoded, $maxlen, "\n"));
+		$encoded = trim(chunk_preg_split($encoded, $maxlen, "\n"));
 	  } else {
 		$encoding = 'Q';
 		$encoded = $this->EncodeQ($str, $position);

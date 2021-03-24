@@ -263,7 +263,7 @@ function TinyMCE_table_doExecCommand(editor_id, element, command, user_interface
 
 	function nextElm(node, names) {
 
-        var namesAr = names.split(',');
+        var namesAr = names.preg_split(',');
 
 		while ((node = node.nextSibling) != null) {
             for (var i=0; i<namesAr.length; i++) {

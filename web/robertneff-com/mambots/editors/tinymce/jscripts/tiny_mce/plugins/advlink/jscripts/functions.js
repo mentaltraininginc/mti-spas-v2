@@ -244,7 +244,7 @@ function parseLink(link) {
 		// Build variable array
 		var variables = new Array();
 		variables["_function"] = fnName;
-		var variableValues = link.replace(new RegExp(regExp, "gi"), replaceStr).split('<delim>');
+		var variableValues = link.replace(new RegExp(regExp, "gi"), replaceStr).preg_split('<delim>');
 		for (var i=0; i<variableNames.length; i++)
 			variables[variableNames[i]] = variableValues[i];
 
@@ -263,11 +263,11 @@ function parseOptions(opts) {
 	opts = opts.replace(/;/g, ",");
 	opts = opts.replace(/[^0-9a-z=,]/g, "");
 
-	var optionChunks = opts.split(',');
+	var optionChunks = opts.preg_split(',');
 	var options = new Array();
 
 	for (var i=0; i<optionChunks.length; i++) {
-		var parts = optionChunks[i].split('=');
+		var parts = optionChunks[i].preg_split('=');
 
 		if (parts.length == 2)
 			options[parts[0]] = parts[1];
@@ -522,7 +522,7 @@ function getLinkListHTML(elm_id, target_form_element, onchange_func) {
 }
 
 function getTargetListHTML(elm_id, target_form_element) {
-	var targets = tinyMCE.getParam('theme_advanced_link_targets', '').split(';');
+	var targets = tinyMCE.getParam('theme_advanced_link_targets', '').preg_split(';');
 	var html = '';
 
 	html += '<select id="' + elm_id + '" name="' + elm_id + '" onfocus="tinyMCE.addSelectAccessibility(event, this, window);" onchange="this.form.' + target_form_element + '.value=';
@@ -539,8 +539,8 @@ function getTargetListHTML(elm_id, target_form_element) {
 		if (targets[i] == "")
 			continue;
 
-		key = targets[i].split('=')[0];
-		value = targets[i].split('=')[1];
+		key = targets[i].preg_split('=')[0];
+		value = targets[i].preg_split('=')[1];
 
 		html += '<option value="' + key + '">' + value + ' (' + key + ')</option>';
 	}

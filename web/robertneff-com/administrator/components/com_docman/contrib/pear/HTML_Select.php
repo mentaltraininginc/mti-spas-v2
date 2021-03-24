@@ -105,7 +105,7 @@ class HTML_Select extends HTML_Common
     function setSelectedValues($values)
     {
         if (is_string($values)) {
-            $values = split("[ ]?,[ ]?", $values);
+            $values = preg_split("[ ]?,[ ]?", $values);
         }
         $this->_values = $values;  
     }

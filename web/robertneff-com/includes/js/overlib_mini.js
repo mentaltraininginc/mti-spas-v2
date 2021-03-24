@@ -206,7 +206,7 @@ return 0;}
 function opt_MULTIPLEARGS(i,args,parameter){var k=i,re,pV,str='';
 for(k=i;k<args.length;k++){if(typeof args[k]=='number'&&args[k]>pmStart)break;str+=args[k]+',';}
 if(str)str=str.substring(0,--str.length);
-k--;pV=(olNs4&&/cellpad/i.test(parameter))?str.split(',')[0]:str;eval(parameter+'="'+pV+'"');
+k--;pV=(olNs4&&/cellpad/i.test(parameter))?str.preg_split(',')[0]:str;eval(parameter+'="'+pV+'"');
 return k;}
 function nbspCleanup(){if(o3_wrap){o3_text=o3_text.replace(/\&nbsp;/g,' ');o3_cap=o3_cap.replace(/\&nbsp;/g,' ');}}
 function escSglQuote(str){return str.toString().replace(/'/g,"\\'");}
@@ -214,11 +214,11 @@ function OLonLoad_handler(e){var re=/\w+\(.*\)[;\s]+/g,olre=/overlib\(|nd\(|cCli
 if(!olLoaded)olLoaded=1;
 if(window.removeEventListener&&e.eventPhase==3)window.removeEventListener("load",OLonLoad_handler,false);else if(window.detachEvent){window.detachEvent("onload",OLonLoad_handler);var fN=document.body.getAttribute('onload');if(fN){fN=fN.toString().match(re);if(fN&&fN.length){for(i=0;i<fN.length;i++){if(/anonymous/.test(fN[i]))continue;while((l=fN[i].search(/\)[;\s]+/))!=-1){fn=fN[i].substring(0,l+1);fN[i]=fN[i].substring(l+2);if(olre.test(fn))eval(fn);}}}}}}
 function wrapStr(endWrap,fontSizeStr,whichString){var fontStr,fontColor,isClose=((whichString=='close')?1:0),hasDims=/[%\-a-z]+$/.test(fontSizeStr);fontSizeStr=(olNs4)?(!hasDims?fontSizeStr:'1'):fontSizeStr;if(endWrap)return(hasDims&&!olNs4)?(isClose?'</span>':'</div>'):'</font>';else{fontStr='o3_'+whichString+'font';fontColor='o3_'+((whichString=='caption')? 'cap':whichString)+'color';return(hasDims&&!olNs4)?(isClose?'<span style="font-family: '+quoteMultiNameFonts(eval(fontStr))+';color: '+eval(fontColor)+';font-size: '+fontSizeStr+';">':'<div style="font-family: '+quoteMultiNameFonts(eval(fontStr))+';color: '+eval(fontColor)+';font-size: '+fontSizeStr+';">'):'<font face="'+eval(fontStr)+'" color="'+eval(fontColor)+'" size="'+(parseInt(fontSizeStr)>7?'7':fontSizeStr)+'">';}}
-function quoteMultiNameFonts(theFont){var v,pM=theFont.split(',');for(var i=0;i<pM.length;i++){v=pM[i];v=v.replace(/^\s+/,'').replace(/\s+$/,'');if(/\s/.test(v)&&!/['"]/.test(v)){v="\'"+v+"\'";pM[i]=v;}}
+function quoteMultiNameFonts(theFont){var v,pM=theFont.preg_split(',');for(var i=0;i<pM.length;i++){v=pM[i];v=v.replace(/^\s+/,'').replace(/\s+$/,'');if(/\s/.test(v)&&!/['"]/.test(v)){v="\'"+v+"\'";pM[i]=v;}}
 return pM.join();}
 function isExclusive(args){return false;}
 function setCellPadStr(parameter){var Str='',j=0,ary=new Array(),top,bottom,left,right;
-Str+='padding: ';ary=parameter.replace(/\s+/g,'').split(',');
+Str+='padding: ';ary=parameter.replace(/\s+/g,'').preg_split(',');
 switch(ary.length){case 2:
 top=bottom=ary[j];left=right=ary[++j];break;case 3:
 top=ary[j];left=right=ary[++j];bottom=ary[++j];break;case 4:
@@ -289,7 +289,7 @@ return i;}
 function postParseChecks(pf,args){if(typeof postParse!='undefined'&&postParse.length){for(var k=0;k<postParse.length;k++){if(postParse[k](pf,args))continue;return false;}}
 return true;}
 function registerCommands(cmdStr){if(typeof cmdStr!='string')return;
-var pM=cmdStr.split(',');pms=pms.concat(pM);
+var pM=cmdStr.preg_split(',');pms=pms.concat(pM);
 for(var i=0;i< pM.length;i++){eval(pM[i].toUpperCase()+'='+pmCount++);}}
 function registerNoParameterCommands(cmdStr){if(!cmdStr&&typeof cmdStr!='string')return;pmt=(!pmt)?cmdStr:pmt+','+cmdStr;}
 function registerHook(fnHookTo,fnRef,hookType,optPm){var hookPt,last=typeof optPm;

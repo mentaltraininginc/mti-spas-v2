@@ -31,7 +31,7 @@ function ReadMap($enc)
 	{
 		if($l{0}=='!')
 		{
-			$e=preg_split('/[ \\t]+/',chop($l));
+			$e=preg_preg_split('/[ \\t]+/',chop($l));
 			$cc=hexdec(substr($e[0],1));
 			$gn=$e[2];
 			$cc2gn[$cc]=$gn;

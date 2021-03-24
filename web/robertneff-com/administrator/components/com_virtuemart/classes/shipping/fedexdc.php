@@ -275,7 +275,7 @@ class ps_fedexdc {
         $this->rHash = array();
         $count=0;
         $st_key = 0;	// start the first key at 0
-        $aFedRet = preg_split('/,"/s', $this->httpBody);
+        $aFedRet = preg_preg_split('/,"/s', $this->httpBody);
         foreach($aFedRet as $chunk) {
             preg_match('/(.*)"([\d+\-?]+)/s', $chunk, $match);
             if(empty($match[1])) continue;

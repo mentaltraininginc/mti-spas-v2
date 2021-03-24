@@ -1559,7 +1559,7 @@ class samSiteMap {
                         case 'component_item_link':
                         break;
                         case 'content_item_link':
-                        $temp = split("&task=view&id=", $newurl);
+                        $temp = preg_split("&task=view&id=", $newurl);
                         $newurl .= '&Itemid='. $mosItemid;
                         break;
                         case 'url':

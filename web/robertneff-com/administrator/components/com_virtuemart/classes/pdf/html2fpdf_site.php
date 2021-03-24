@@ -81,7 +81,7 @@ class PDF extends HTML2FPDF {
     //Custom Word Wrap (para melhorar organização das palvras no titulo)
     $maxwidth = $this->divwidth;
     $titulo = trim($titulo);
-    $words = preg_split('/ +/', $titulo);
+    $words = preg_preg_split('/ +/', $titulo);
     $space = $this->GetStringWidth(' ');
     $titulo = '';
     $width = 0;

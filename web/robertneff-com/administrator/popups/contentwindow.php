@@ -19,7 +19,7 @@ include_once ( $mosConfig_absolute_path . '/language/' . $mosConfig_lang . '.php
 
 $css = mosGetParam( $_REQUEST, 't', '' );
 
-$iso = split( '=', _ISO );
+$iso = preg_split( '=', _ISO );
 // xml prolog
 echo '<?xml version="1.0" encoding="'. $iso[1] .'"?' .'>';
 ?>
@@ -42,12 +42,12 @@ echo '<?xml version="1.0" encoding="'. $iso[1] .'"?' .'>';
 		var temp = new Array();
 		for (var i=0, n=form.imagelist.options.length; i < n; i++) {
 			value = form.imagelist.options[i].value;
-			parts = value.split( '|' );
+			parts = value.preg_split( '|' );
 
 			temp[i] = '<img src="images/stories/' + parts[0] + '" align="' + parts[1] + '" border="' + parts[3] + '" alt="' + parts[2] + '" hspace="6" />';
 		}
 
-		var temp2 = alltext.split( '{mosimage}' );
+		var temp2 = alltext.preg_split( '{mosimage}' );
 
 		var alltext = temp2[0];
 

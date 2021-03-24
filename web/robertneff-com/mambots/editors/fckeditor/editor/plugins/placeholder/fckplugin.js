@@ -123,7 +123,7 @@ else
 
 		for ( var n = 0 ; n < aNodes.length ; n++ )
 		{
-			var aPieces = aNodes[n].nodeValue.split( /(\[\[[^\[\]]+\]\])/g ) ;
+			var aPieces = aNodes[n].nodeValue.preg_split( /(\[\[[^\[\]]+\]\])/g ) ;
 
 			for ( var i = 0 ; i < aPieces.length ; i++ )
 			{

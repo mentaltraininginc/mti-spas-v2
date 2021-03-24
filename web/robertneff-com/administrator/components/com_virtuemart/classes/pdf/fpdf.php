@@ -1259,7 +1259,7 @@ function WordWrap(&$text, $maxwidth)
 
     foreach ($lines as $line)
     {
-        $words = preg_split('/ +/', $line);
+        $words = preg_preg_split('/ +/', $line);
         $width = 0;
 
         foreach ($words as $word)

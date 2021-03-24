@@ -419,7 +419,7 @@ function _HashHTMLBlocks_InMarkdown($text, $indent = 0,
 		# pattern will be at the end, and between will be any catches made 
 		# by the pattern.
 		#
-		$parts = preg_split($block_tag_match, $text, 2, 
+		$parts = preg_preg_split($block_tag_match, $text, 2, 
 							PREG_SPLIT_DELIM_CAPTURE);
 		
 		# If in Markdown span mode, replace any multiple newlines that would 
@@ -571,7 +571,7 @@ function _HashHTMLBlocks_InHTML($text, $hash_function, $md_attr) {
 		# pattern will be at the end, and between will be any catches made 
 		# by the pattern.
 		#
-		$parts = preg_split($tag_match, $text, 2, PREG_SPLIT_DELIM_CAPTURE);
+		$parts = preg_preg_split($tag_match, $text, 2, PREG_SPLIT_DELIM_CAPTURE);
 		
 		if (count($parts) < 3) {
 			#
@@ -1139,7 +1139,7 @@ function _DoTable_callback($matches) {
 	$content	= preg_replace('/[|] *$/m', '', $content);
 	
 	# Reading alignement from header underline.
-	$separators	= preg_split('/ *[|] */', $underline);
+	$separators	= preg_preg_split('/ *[|] */', $underline);
 	foreach ($separators as $n => $s) {
 		if (preg_match('/^ *-+: *$/', $s))		$attr[$n] = ' align="right"';
 		else if (preg_match('/^ *:-+: *$/', $s))$attr[$n] = ' align="center"';
@@ -1150,7 +1150,7 @@ function _DoTable_callback($matches) {
 	# Creating code spans before splitting the row is an easy way to 
 	# handle a code span containg pipes.
 	$head	= _DoCodeSpans($head);
-	$headers	= preg_split('/ *[|] */', $head);
+	$headers	= preg_preg_split('/ *[|] */', $head);
 	$col_count	= count($headers);
 	
 	# Write column headers.
@@ -1172,7 +1172,7 @@ function _DoTable_callback($matches) {
 		$row = _DoCodeSpans($row);
 		
 		# Split row by cell.
-		$row_cells = preg_split('/ *[|] */', $row, $col_count);
+		$row_cells = preg_preg_split('/ *[|] */', $row, $col_count);
 		$row_cells = array_pad($row_cells, $col_count, '');
 		
 		$text .= "<tr>\n";
@@ -1649,7 +1649,7 @@ function _FormParagraphs($text) {
 	# Strip leading and trailing lines:
 	$text = preg_replace(array('/\A\n+/', '/\n+\z/'), '', $text);
 	
-	$grafs = preg_split('/\n{2,}/', $text, -1, PREG_SPLIT_NO_EMPTY);
+	$grafs = preg_preg_split('/\n{2,}/', $text, -1, PREG_SPLIT_NO_EMPTY);
 
 	#
 	# Wrap <p> tags and unhashify HTML blocks
@@ -1817,7 +1817,7 @@ function _TokenizeHTML($str) {
 			 								# regular tags
 			 '(?:<[/!$]?[-a-zA-Z0-9:]+\b(?>[^"\'>]+|"[^"]*"|\'[^\']*\')*>)'; 
 
-	$parts = preg_split("{($match)}", $str, -1, PREG_SPLIT_DELIM_CAPTURE);
+	$parts = preg_preg_split("{($match)}", $str, -1, PREG_SPLIT_DELIM_CAPTURE);
 
 	foreach ($parts as $part) {
 		if (++$index % 2 && $part != '') 

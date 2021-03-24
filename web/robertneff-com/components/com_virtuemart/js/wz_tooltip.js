@@ -366,7 +366,7 @@ function tt_Show(t_e, t_id, t_sup, t_delay, t_fix, t_left, t_offx, t_offy, t_sta
 			tt_objH - tt_offY;
 
 		tt_SetDivZ();
-		if(t_fix) tt_SetDivPos(tt_Int((t_fix = t_fix.split(','))[0]), tt_Int(t_fix[1]));
+		if(t_fix) tt_SetDivPos(tt_Int((t_fix = t_fix.preg_split(','))[0]), tt_Int(t_fix[1]));
 		else tt_SetDivPos(tt_EvX(t_e), tt_EvY(t_e));
 
 		var t_txt = 'tt_ShowDiv(\'true\');';

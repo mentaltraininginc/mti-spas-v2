@@ -200,7 +200,7 @@ MCWindows.prototype.parseFeatures = function(opts) {
 	opts = opts.replace(/;/g, ",");
 	opts = opts.replace(/[^0-9a-z=,]/g, "");
 
-	var optionChunks = opts.split(',');
+	var optionChunks = opts.preg_split(',');
 	var options = new Array();
 
 	options['left'] = "10";
@@ -220,7 +220,7 @@ MCWindows.prototype.parseFeatures = function(opts) {
 		return options;
 
 	for (var i=0; i<optionChunks.length; i++) {
-		var parts = optionChunks[i].split('=');
+		var parts = optionChunks[i].preg_split('=');
 
 		if (parts.length == 2)
 			options[parts[0]] = parts[1];

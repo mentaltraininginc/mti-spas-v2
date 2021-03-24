@@ -27,8 +27,8 @@ var Scriptaculous = {
   },
   load: function() {
     if((typeof Prototype=='undefined') ||
-      parseFloat(Prototype.Version.split(".")[0] + "." +
-                 Prototype.Version.split(".")[1]) < 1.4)
+      parseFloat(Prototype.Version.preg_split(".")[0] + "." +
+                 Prototype.Version.preg_split(".")[1]) < 1.4)
       throw("script.aculo.us requires the Prototype JavaScript framework >= 1.4.0");
     var scriptTags = document.getElementsByTagName("script");
     for(var i=0;i<scriptTags.length;i++) {

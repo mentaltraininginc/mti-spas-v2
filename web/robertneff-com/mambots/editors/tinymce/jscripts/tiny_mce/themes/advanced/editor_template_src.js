@@ -85,7 +85,7 @@ function TinyMCE_advanced_getControlHTML(button_name)
 	{
 		case "formatselect":
 			var html = '<select id="{$editor_id}_formatSelect" name="{$editor_id}_formatSelect" onfocus="tinyMCE.addSelectAccessibility(event, this, window);" onchange="tinyMCE.execInstanceCommand(\'{$editor_id}\',\'FormatBlock\',false,this.options[this.selectedIndex].value);" class="mceSelectList">';
-			var formats = tinyMCE.getParam("theme_advanced_blockformats", "p,address,pre,h1,h2,h3,h4,h5,h6", true).split(',');
+			var formats = tinyMCE.getParam("theme_advanced_blockformats", "p,address,pre,h1,h2,h3,h4,h5,h6", true).preg_split(',');
 			var lookup = [
 				['p', '{$lang_theme_paragraph}'],
 				['address', '{$lang_theme_address}'],
@@ -124,10 +124,10 @@ function TinyMCE_advanced_getControlHTML(button_name)
 			var fontHTML = '<select id="{$editor_id}_fontNameSelect" name="{$editor_id}_fontNameSelect" onfocus="tinyMCE.addSelectAccessibility(event, this, window);" onchange="tinyMCE.execInstanceCommand(\'{$editor_id}\',\'FontName\',false,this.options[this.selectedIndex].value);" class="mceSelectList"><option value="">{$lang_theme_fontdefault}</option>';
 			var iFonts = 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;Georgia=georgia,times new roman,times,serif;Tahoma=tahoma,arial,helvetica,sans-serif;Times New Roman=times new roman,times,serif;Verdana=verdana,arial,helvetica,sans-serif;Impact=impact;WingDings=wingdings';
 			var nFonts = 'Andale Mono=andale mono,times;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;Comic Sans MS=comic sans ms,sand;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Impact=impact,chicago;Symbol=symbol;Tahoma=tahoma,arial,helvetica,sans-serif;Terminal=terminal,monaco;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;Webdings=webdings;Wingdings=wingdings,zapf dingbats';
-			var fonts = tinyMCE.getParam("theme_advanced_fonts", nFonts).split(';');
+			var fonts = tinyMCE.getParam("theme_advanced_fonts", nFonts).preg_split(';');
 			for (var i=0; i<fonts.length; i++) {
 				if (fonts[i] != '') {
-					var parts = fonts[i].split('=');
+					var parts = fonts[i].preg_split('=');
 					fontHTML += '<option value="' + parts[1] + '">' + parts[0] + '</option>';
 				}
 			}
@@ -332,13 +332,13 @@ function TinyMCE_advanced_getEditorTemplate(settings, editorId)
 	// Setup style select options -- MOVED UP FOR EXTERNAL TOOLBAR COMPATABILITY!
 	var styleSelectHTML = '<option value="">{$lang_theme_style_select}</option>';
 	if (settings['theme_advanced_styles']) {
-		var stylesAr = settings['theme_advanced_styles'].split(';');
+		var stylesAr = settings['theme_advanced_styles'].preg_split(';');
 		
 		for (var i=0; i<stylesAr.length; i++) {
 			var key, value;
 
-			key = stylesAr[i].split('=')[0];
-			value = stylesAr[i].split('=')[1];
+			key = stylesAr[i].preg_split('=')[0];
+			value = stylesAr[i].preg_split('=')[1];
 
 			styleSelectHTML += '<option value="' + value + '">' + key + '</option>';
 		}

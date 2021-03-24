@@ -39,7 +39,7 @@ $content	= eregi_replace($pat, $replace, $row->content);
 $content	= eregi_replace($pat2, $replace2, $row->content);
 $title		= eregi_replace($pat2, $replace2, $row->title);
 
-$iso = split( '=', _ISO );
+$iso = preg_split( '=', _ISO );
 // xml prolog
 echo '<?xml version="1.0" encoding="'. $iso[1] .'"?' .'>';
 ?>

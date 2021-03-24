@@ -79,9 +79,9 @@ function ff_redirect(url)
 				f.action = url;
 			} else {
 				f.action = url.substring(0, pos);
-				var pms = url.substring(pos+1, url.length).split('&');
+				var pms = url.substring(pos+1, url.length).preg_split('&');
 				for (var p = 0; p < pms.length; p++) {
-					var pm = pms[p].split('=');
+					var pm = pms[p].preg_split('=');
 					var prop = '';
 					if (pm.length > 0) prop = ff_trim(pm[0]);
 					var val = '';

@@ -44,7 +44,7 @@ class content_category_menu_html {
 					return;
 				}
 				sectcat = getSelectedText( 'adminForm', 'componentid' );
-				sectcats = sectcat.split('/');
+				sectcats = sectcat.preg_split('/');
 				section = getSelectedOption( 'adminForm', 'componentid' );
 
 				form.link.value = "index.php?option=com_content&task=category&sectionid=" + section.id + "&id=" + form.componentid.value;

@@ -22,7 +22,7 @@ return r;}; Calendar.isRelated = function (el, evt) { var related = evt.relatedT
 while (related) { if (related == el) { return true;}
 related = related.parentNode;}
 return false;}; Calendar.removeClass = function(el, className) { if (!(el && el.className)) { return;}
-var cls = el.className.split(" "); var ar = new Array(); for (var i = cls.length; i > 0;) { if (cls[--i] != className) { ar[ar.length] = cls[i];}
+var cls = el.className.preg_split(" "); var ar = new Array(); for (var i = cls.length; i > 0;) { if (cls[--i] != className) { ar[ar.length] = cls[i];}
 }
 el.className = ar.join(" ");}; Calendar.addClass = function(el, className) { Calendar.removeClass(el, className); el.className += " " + className;}; Calendar.getElement = function(ev) { if (Calendar.is_ie) { return window.event.srcElement;} else { return ev.currentTarget;}
 }; Calendar.getTargetElement = function(ev) { if (Calendar.is_ie) { return window.event.srcElement;} else { return ev.target;}
@@ -156,8 +156,8 @@ var el = Calendar.is_ie ? Calendar.getElement(ev) : Calendar.getTargetElement(ev
 }
 this.element.style.display = "block"; this.hidden = false; if (this.isPopup) { window.calendar = this; Calendar.addEvent(document, "keydown", Calendar._keyEvent); Calendar.addEvent(document, "keypress", Calendar._keyEvent); Calendar.addEvent(document, "mousedown", Calendar._checkCalendar);}
 this.hideShowCovered();}; Calendar.prototype.hide = function () { if (this.isPopup) { Calendar.removeEvent(document, "keydown", Calendar._keyEvent); Calendar.removeEvent(document, "keypress", Calendar._keyEvent); Calendar.removeEvent(document, "mousedown", Calendar._checkCalendar);}
-this.element.style.display = "none"; this.hidden = true; this.hideShowCovered();}; Calendar.prototype.showAt = function (x, y) { var s = this.element.style; s.left = x + "px"; s.top = y + "px"; this.show();}; Calendar.prototype.showAtElement = function (el) { var p = Calendar.getAbsolutePos(el); this.showAt(p.x, p.y + el.offsetHeight);}; Calendar.prototype.setDateFormat = function (str) { this.dateFormat = str;}; Calendar.prototype.setTtDateFormat = function (str) { this.ttDateFormat = str;}; Calendar.prototype.parseDate = function (str, fmt) { var y = 0; var m = -1; var d = 0; var a = str.split(/\W+/); if (!fmt) { fmt = this.dateFormat;}
-var b = fmt.split(/\W+/); var i = 0, j = 0; for (i = 0; i < a.length; ++i) { if (b[i] == "D" || b[i] == "DD") { continue;}
+this.element.style.display = "none"; this.hidden = true; this.hideShowCovered();}; Calendar.prototype.showAt = function (x, y) { var s = this.element.style; s.left = x + "px"; s.top = y + "px"; this.show();}; Calendar.prototype.showAtElement = function (el) { var p = Calendar.getAbsolutePos(el); this.showAt(p.x, p.y + el.offsetHeight);}; Calendar.prototype.setDateFormat = function (str) { this.dateFormat = str;}; Calendar.prototype.setTtDateFormat = function (str) { this.ttDateFormat = str;}; Calendar.prototype.parseDate = function (str, fmt) { var y = 0; var m = -1; var d = 0; var a = str.preg_split(/\W+/); if (!fmt) { fmt = this.dateFormat;}
+var b = fmt.preg_split(/\W+/); var i = 0, j = 0; for (i = 0; i < a.length; ++i) { if (b[i] == "D" || b[i] == "DD") { continue;}
 if (b[i] == "d" || b[i] == "dd") { d = parseInt(a[i], 10);}
 if (b[i] == "m" || b[i] == "mm") { m = parseInt(a[i], 10) - 1;}
 if (b[i] == "y") { y = parseInt(a[i], 10);}

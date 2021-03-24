@@ -548,7 +548,7 @@ function filesSelectList(&$document)
             $selected = $document->dmfilename;
             
             //change document data
-            $filename = split("\.", $document->dmfilename);
+            $filename = preg_split("\.", $document->dmfilename);
             $document->dmname = $filename[0];
         } 
     } 

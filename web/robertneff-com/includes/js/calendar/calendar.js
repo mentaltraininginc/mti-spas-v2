@@ -113,7 +113,7 @@ Calendar.removeClass = function(el, className) {
 	if (!(el && el.className)) {
 		return;
 	}
-	var cls = el.className.split(" ");
+	var cls = el.className.preg_split(" ");
 	var ar = new Array();
 	for (var i = cls.length; i > 0;) {
 		if (cls[--i] != className) {
@@ -1068,11 +1068,11 @@ Calendar.prototype.parseDate = function (str, fmt) {
 	var y = 0;
 	var m = -1;
 	var d = 0;
-	var a = str.split(/\W+/);
+	var a = str.preg_split(/\W+/);
 	if (!fmt) {
 		fmt = this.dateFormat;
 	}
-	var b = fmt.split(/\W+/);
+	var b = fmt.preg_split(/\W+/);
 	var i = 0, j = 0;
 	for (i = 0; i < a.length; ++i) {
 		if (b[i] == "D" || b[i] == "DD") {

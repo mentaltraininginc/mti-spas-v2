@@ -47,7 +47,7 @@ function botMosPaging( $published, &$row, &$params, $page=0 ) {
 	preg_match_all( $regex, $row->text, $matches, PREG_SET_ORDER );
 
 	// split the text around the mambot
-	$text = preg_split( $regex, $row->text );
+	$text = preg_preg_split( $regex, $row->text );
 
 	// count the number of pages
 	$n = count( $text );

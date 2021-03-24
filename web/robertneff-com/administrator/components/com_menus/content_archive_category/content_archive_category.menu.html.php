@@ -44,7 +44,7 @@ class content_archive_category_menu_html {
 					return;
 				}
 				sectcat = getSelectedText( 'adminForm', 'componentid' );
-				sectcats = sectcat.split('/');
+				sectcats = sectcat.preg_split('/');
 				section = getSelectedOption( 'adminForm', 'componentid' );
 
 				form.link.value = "index.php?option=com_content&task=archivecategory&id=" + form.componentid.value;

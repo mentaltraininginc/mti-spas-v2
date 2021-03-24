@@ -200,44 +200,44 @@ function sefRelToAbs( $string ) {
 			*/
 			$sefstring .= "content/";
 			if (eregi("&task=",$string)) {
-				$temp = split("&task=", $string);
-				$temp = split("&", $temp[1]);
+				$temp = preg_split("&task=", $string);
+				$temp = preg_split("&", $temp[1]);
 
 				$sefstring .= $temp[0]."/";
 			}
 			if (eregi("&sectionid=",$string)) {
-				$temp = split("&sectionid=", $string);
-				$temp = split("&", $temp[1]);
+				$temp = preg_split("&sectionid=", $string);
+				$temp = preg_split("&", $temp[1]);
 
 				$sefstring .= $temp[0]."/";
 			}
 			if (eregi("&id=",$string)) {
-				$temp = split("&id=", $string);
-				$temp = split("&", $temp[1]);
+				$temp = preg_split("&id=", $string);
+				$temp = preg_split("&", $temp[1]);
 
 				$sefstring .= $temp[0]."/";
 			}
 			if (eregi("&Itemid=",$string)) {
-				$temp = split("&Itemid=", $string);
-				$temp = split("&", $temp[1]);
+				$temp = preg_split("&Itemid=", $string);
+				$temp = preg_split("&", $temp[1]);
 
 				$sefstring .= $temp[0]."/";
 			}
 			if (eregi("&limit=",$string)) {
-				$temp = split("&limit=", $string);
-				$temp = split("&", $temp[1]);
+				$temp = preg_split("&limit=", $string);
+				$temp = preg_split("&", $temp[1]);
 
 				$sefstring .= $temp[0]."/";
 			}
 			if (eregi("&limitstart=",$string)) {
-				$temp = split("&limitstart=", $string);
-				$temp = split("&", $temp[1]);
+				$temp = preg_split("&limitstart=", $string);
+				$temp = preg_split("&", $temp[1]);
 
 				$sefstring .= $temp[0]."/";
 			}
 			if (eregi("&lang=",$string)) {
-				$temp = split("&lang=", $string);
-				$temp = split("&", $temp[1]);
+				$temp = preg_split("&lang=", $string);
+				$temp = preg_split("&", $temp[1]);
 
 				$sefstring .= "lang,".$temp[0]."/";
 			}
@@ -248,8 +248,8 @@ function sefRelToAbs( $string ) {
 			index.php?option=com_xxxx&...
 			*/
 			$sefstring 	= "component/";
-			$temp 		= split("\?", $string);
-			$temp 		= split("&", $temp[1]);
+			$temp 		= preg_split("\?", $string);
+			$temp 		= preg_split("&", $temp[1]);
 
 			foreach($temp as $key => $value) {
 				$sefstring .= $value."/";

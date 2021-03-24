@@ -27,7 +27,7 @@ var langue=getCk();
 if (langue==""){
 	langue=key[keydeb]
 }
-CarMaj=Maj[langue].split("|");CarMin=Min[langue].split("|")
+CarMaj=Maj[langue].preg_split("|");CarMin=Min[langue].preg_split("|")
 
 /*unikey*/
 var posUniKeyLeft=0, posUniKeyTop=0
@@ -90,7 +90,7 @@ document.write('</map>')
 
 /*fonctions*/
 function ecrire(i){
-	txt=rechercher()+"|";subtxt=txt.split("|")
+	txt=rechercher()+"|";subtxt=txt.preg_split("|")
 	ceci=(lock==1)?CarMaj[i]:((caps==1)?CarMaj[i]:CarMin[i])
 	if (test(ceci)){subtxt[0]+=cardia(ceci);distinguer(false)}
 	else if(dia[accent]!=null&&dia[hexa(ceci)]!=null){distinguer(false);accent=hexa(ceci);distinguer(true)}
@@ -102,7 +102,7 @@ function ecrire(i){
 	if (caps==1){caps=0;MinusMajus()}
 }
 function faire(ceci){
-	txt=rechercher()+"|";subtxt=txt.split("|")
+	txt=rechercher()+"|";subtxt=txt.preg_split("|")
 	l0=subtxt[0].length
 	l1=subtxt[1].length
 	c1=subtxt[0].substring(0,(l0-2))
@@ -154,7 +154,7 @@ function keyscroll(n){
 }
 function charger(i){
 	langue=key[i+keydeb];setCk(langue);accent="0000"
-	CarMaj=Maj[langue].split("|");CarMin=Min[langue].split("|")
+	CarMaj=Maj[langue].preg_split("|");CarMin=Min[langue].preg_split("|")
 	for (i=0;i<nbTouches;i++){
 		CarMaj[i]=((CarMaj[i]!="0000")?(fromhexby4tocar(CarMaj[i])):"")
 		CarMin[i]=((CarMin[i]!="0000")?(fromhexby4tocar(CarMin[i])):"")

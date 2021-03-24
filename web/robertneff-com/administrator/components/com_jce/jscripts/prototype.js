@@ -157,20 +157,20 @@ Object.extend(String.prototype, {
   },
 
   toQueryParams: function() {
-    var pairs = this.match(/^\??(.*)$/)[1].split('&');
+    var pairs = this.match(/^\??(.*)$/)[1].preg_split('&');
     return pairs.inject({}, function(params, pairString) {
-      var pair = pairString.split('=');
+      var pair = pairString.preg_split('=');
       params[pair[0]] = pair[1];
       return params;
     });
   },
 
   toArray: function() {
-    return this.split('');
+    return this.preg_split('');
   },
 
   camelize: function() {
-    var oStringList = this.split('-');
+    var oStringList = this.preg_split('-');
     if (oStringList.length == 1) return oStringList[0];
 
     var camelizedString = this.indexOf('-') == 0
@@ -1061,7 +1061,7 @@ Element.ClassNames.prototype = {
   },
 
   _each: function(iterator) {
-    this.element.className.split(/\s+/).select(function(name) {
+    this.element.className.preg_split(/\s+/).select(function(name) {
       return name.length > 0;
     })._each(iterator);
   },

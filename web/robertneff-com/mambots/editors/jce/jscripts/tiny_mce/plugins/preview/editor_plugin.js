@@ -71,12 +71,12 @@ var TinyMCE_PreviewPlugin = {
                     var temp = new Array();
             		for (var i=0, n=form.imagelist.options.length; i < n; i++) {
             			value = form.imagelist.options[i].value;
-            			parts = value.split( '|' );
+            			parts = value.preg_split( '|' );
 
             			temp[i] = '<img src="'+ tinyMCE.getParam('jbase') +'/images/stories/' + parts[0] + '" align="' + parts[1] + '" border="' + parts[3] + '" alt="' + parts[2] + '" hspace="6" />';
             		}
 
-            		var temp2 = c.split( '{mosimage}' );
+            		var temp2 = c.preg_split( '{mosimage}' );
 
             		var c = temp2[0];
 

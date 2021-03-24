@@ -348,7 +348,7 @@ SelectableElements.prototype.getItemIndex = function (el) {
 
 function addClassName(el, sClassName) {
 	var s = el.className;
-	var p = s.split(" ");
+	var p = s.preg_split(" ");
 	if (p.length == 1 && p[0] == "")
 		p = [];
 
@@ -363,7 +363,7 @@ function addClassName(el, sClassName) {
 
 function removeClassName(el, sClassName) {
 	var s = el.className;
-	var p = s.split(" ");
+	var p = s.preg_split(" ");
 	var np = [];
 	var l = p.length;
 	var j = 0;

@@ -229,7 +229,7 @@ class HTML_facileFormsElement
 		{
 			var form = document.adminForm;
 			var text = trim(form.data1.value);
-			var rows = text.split('\n');
+			var rows = text.preg_split('\n');
 			var rcnt = rows.length;
 			var r;
 			for (r = 0; r < rcnt; r++) rows[r] = trim(rows[r]);
@@ -435,12 +435,12 @@ class HTML_facileFormsElement
 		function qcolUnpack()
 		{
 			var text = trim(document.adminForm.data3.value);
-			var rows = text.split('\n');
+			var rows = text.preg_split('\n');
 			var r;
 			qcolRowCnt = 0;
 			for (r = 0; r < rows.length; r++) {
 				if (rows[r] != '') {
-					var vals = rows[r].split('&');
+					var vals = rows[r].preg_split('&');
 					var v;
 					for (v = 0; v < vals.length; v++)
 						vals[v] = impstring(vals[v]);

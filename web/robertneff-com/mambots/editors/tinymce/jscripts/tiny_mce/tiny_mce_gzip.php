@@ -102,7 +102,7 @@ TinyMCECompressed.prototype.init = function(settings) {
 }
 
 TinyMCECompressed.prototype.getOnce = function(str) {
-	var ar = str.split(',');
+	var ar = str.preg_split(',');
 
 	for (var i=0; i<ar.length; i++) {
 		if (ar[i] == '')

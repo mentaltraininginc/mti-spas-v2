@@ -13,7 +13,7 @@
 String.prototype.parseColor = function() {  
   color = "#";  
   if(this.slice(0,4) == "rgb(") {  
-    var cols = this.slice(4,this.length-1).split(',');  
+    var cols = this.slice(4,this.length-1).preg_split(',');  
     var i=0; do { color += parseInt(cols[i]).toColorPart() } while (++i<3);  
   } else {  
     if(this.slice(0,1) == '#') {  
@@ -104,7 +104,7 @@ Element.Class = {
  
     // gets space-delimited classnames of an element as an array  
     get: function(element) {  
-      return $(element).className.split(' ');  
+      return $(element).className.preg_split(' ');  
     },  
  
     // functions adapted from original functions by Gavin Kistner  
@@ -113,7 +113,7 @@ Element.Class = {
       var removeClasses = arguments;  
       $R(1,arguments.length-1).each( function(index) {  
         element.className =  
-          element.className.split(' ').reject(  
+          element.className.preg_split(' ').reject(  
             function(klass) { return (klass == removeClasses[index]) } ).join(' ');  
       });  
     },  

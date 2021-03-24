@@ -36,7 +36,7 @@ if (isset($_FILES['userfile'])) {
 		echo "<script>alert('Please select an image to upload'); document.location.href='uploadimage.php';</script>";
 	}
 
-	$filename = split("\.", $userfile_name);
+	$filename = preg_split("\.", $userfile_name);
 
 	if (eregi("[^0-9a-zA-Z_]", $filename[0])) {
 		mosErrorAlert("File must only contain alphanumeric characters and no spaces please.");
@@ -65,7 +65,7 @@ if (isset($_FILES['userfile'])) {
 }
 $css = mosGetParam($_REQUEST,'t','');
 
-$iso = split( '=', _ISO );
+$iso = preg_split( '=', _ISO );
 // xml prolog
 echo '<?xml version="1.0" encoding="'. $iso[1] .'"?' .'>';
 ?>

@@ -406,7 +406,7 @@ TinyMCE.prototype._setEventsEnabled = function(node, state) {
 				'onmousedown','onmouseup','onmouseover','onmousemove',
 				'onmouseout','onkeypress','onkeydown','onkeydown','onkeyup');
 
-	var evs = tinyMCE.settings['event_elements'].split(',');
+	var evs = tinyMCE.settings['event_elements'].preg_split(',');
     for (var y=0; y<evs.length; y++){
 		var elms = node.getElementsByTagName(evs[y]);
 		for (var i=0; i<elms.length; i++) {
@@ -1823,7 +1823,7 @@ TinyMCE.prototype.parseStyle = function(str) {
 	if (str == null)
 		return ar;
 
-	var st = str.split(';');
+	var st = str.preg_split(';');
 
 	tinyMCE.clearArray(ar);
 
@@ -1832,7 +1832,7 @@ TinyMCE.prototype.parseStyle = function(str) {
 			continue;
 
 		var re = new RegExp('^\\s*([^:]*):\\s*(.*)\\s*$');
-		var pa = st[i].replace(re, '$1||$2').split('||');
+		var pa = st[i].replace(re, '$1||$2').preg_split('||');
 //tinyMCE.debug(str, pa[0] + "=" + pa[1], st[i].replace(re, '$1||$2'));
 		if (pa.length == 2)
 			ar[pa[0].toLowerCase()] = pa[1];
@@ -1904,7 +1904,7 @@ TinyMCE.prototype.serializeStyle = function(ar) {
 TinyMCE.prototype.convertRGBToHex = function(s) {
 	if (s.toLowerCase().indexOf('rgb') != -1) {
 		var re = new RegExp("rgb\\s*\\(\\s*([0-9]+).*,\\s*([0-9]+).*,\\s*([0-9]+).*\\)", "gi");
-		var rgb = s.replace(re, "$1,$2,$3").split(',');
+		var rgb = s.replace(re, "$1,$2,$3").preg_split(',');
 		if (rgb.length == 3) {
 			r = parseInt(rgb[0]).toString(16);
 			g = parseInt(rgb[1]).toString(16);
@@ -2258,11 +2258,11 @@ TinyMCE.prototype._getCleanupElementName = function(chunk) {
 TinyMCE.prototype._initCleanup = function() {
 	// Parse valid elements and attributes
 	var validElements = tinyMCE.settings["valid_elements"];
-	validElements = validElements.split(',');
+	validElements = validElements.preg_split(',');
 
 	// Handle extended valid elements
 	var extendedValidElements = tinyMCE.settings["extended_valid_elements"];
-	extendedValidElements = extendedValidElements.split(',');
+	extendedValidElements = extendedValidElements.preg_split(',');
 	for (var i=0; i<extendedValidElements.length; i++) {
 		var elementName = this._getCleanupElementName(extendedValidElements[i]);
 		var skipAdd = false;
@@ -2287,12 +2287,12 @@ TinyMCE.prototype._initCleanup = function() {
 		item = item.replace(']','');
 
 		// Split and convert
-		var attribs = item.split('|');
+		var attribs = item.preg_split('|');
 		for (var x=0; x<attribs.length; x++)
 			attribs[x] = attribs[x].toLowerCase();
 
 		// Handle change elements
-		attribs[0] = attribs[0].split('/');
+		attribs[0] = attribs[0].preg_split('/');
 
 		// Handle default attribute values
 		for (var x=1; x<attribs.length; x++) {
@@ -2315,7 +2315,7 @@ TinyMCE.prototype._initCleanup = function() {
 
 			// Force check
 			if ((pos = attribName.indexOf('<')) != -1) {
-				attribMustBe = attribName.substring(pos+1).split('?');
+				attribMustBe = attribName.substring(pos+1).preg_split('?');
 				attribName = attribName.substring(0, pos);
 			}
 
@@ -2325,7 +2325,7 @@ TinyMCE.prototype._initCleanup = function() {
 		validElements[i] = attribs;
 	}
 
-	var invalidElements = tinyMCE.settings['invalid_elements'].split(',');
+	var invalidElements = tinyMCE.settings['invalid_elements'].preg_split(',');
 	for (var i=0; i<invalidElements.length; i++)
 		invalidElements[i] = invalidElements[i].toLowerCase();
 
@@ -2637,7 +2637,7 @@ TinyMCE.prototype.getParentElement = function(node, names, attrib_name, attrib_v
 		return node;
 	}
 
-	var namesAr = names.split(',');
+	var namesAr = names.preg_split(',');
 
 	if (node == null)
 		return null;
@@ -2844,8 +2844,8 @@ TinyMCE.prototype.convertAbsoluteURLToRelativeURL = function(base_url, url_to_re
 
 	// Crop away last path part
 	base_url = baseURL.path.substring(0, baseURL.path.lastIndexOf('/'));
-	strTok1 = base_url.split('/');
-	strTok2 = targetURL.path.split('/');
+	strTok1 = base_url.preg_split('/');
+	strTok2 = targetURL.path.preg_split('/');
 
 	if (strTok1.length >= strTok2.length) {
 		for (var i=0; i<strTok1.length; i++) {
@@ -2894,8 +2894,8 @@ TinyMCE.prototype.convertRelativeToAbsoluteURL = function(base_url, relative_url
 		return relative_url;
 
 	// Split parts
-	baseURLParts = baseURL['path'].split('/');
-	relURLParts = relURL['path'].split('/');
+	baseURLParts = baseURL['path'].preg_split('/');
+	relURLParts = relURL['path'].preg_split('/');
 
 	// Remove empty chunks
 	var newBaseURLParts = new Array();
@@ -2959,7 +2959,7 @@ TinyMCE.prototype.getParam = function(name, default_value, strip_whitespace, spl
 		value = tinyMCE.regexpReplace(value, "[ \t\r\n]", "");
 
 	if (typeof(split_chr) != "undefined" && split_chr != null) {
-		value = value.split(split_chr);
+		value = value.preg_split(split_chr);
 		var outArray = new Array();
 
 		for (var i=0; i<value.length; i++) {
@@ -3095,7 +3095,7 @@ TinyMCE.prototype.importThemeLanguagePack = function(name) {
 TinyMCE.prototype.importPluginLanguagePack = function(name, valid_languages) {
 	var lang = "en";
 
-	valid_languages = valid_languages.split(',');
+	valid_languages = valid_languages.preg_split(',');
 	for (var i=0; i<valid_languages.length; i++) {
 		if (tinyMCE.settings['language'] == valid_languages[i])
 			lang = tinyMCE.settings['language'];
@@ -3224,7 +3224,7 @@ TinyMCE.prototype.getVisualAidClass = function(class_name, state) {
 
 	// Split
 	var classNames = new Array();
-	var ar = class_name.split(' ');
+	var ar = class_name.preg_split(' ');
 	for (var i=0; i<ar.length; i++) {
 		if (ar[i] == aidClass)
 			ar[i] = "";
@@ -3350,7 +3350,7 @@ TinyMCE.prototype.setStyleAttrib = function(elm, name, value) {
 };
 
 TinyMCE.prototype.convertSpansToFonts = function(doc) {
-	var sizes = tinyMCE.getParam('font_size_style_values').replace(/\s+/, '').split(',');
+	var sizes = tinyMCE.getParam('font_size_style_values').replace(/\s+/, '').preg_split(',');
 
 	var h = doc.body.innerHTML;
 	h = h.replace(/<span/gi, '<font');
@@ -3389,7 +3389,7 @@ TinyMCE.prototype.convertSpansToFonts = function(doc) {
 };
 
 TinyMCE.prototype.convertFontsToSpans = function(doc) {
-	var sizes = tinyMCE.getParam('font_size_style_values').replace(/\s+/, '').split(',');
+	var sizes = tinyMCE.getParam('font_size_style_values').replace(/\s+/, '').preg_split(',');
 
 	var h = doc.body.innerHTML;
 	h = h.replace(/<font/gi, '<span');
@@ -3398,7 +3398,7 @@ TinyMCE.prototype.convertFontsToSpans = function(doc) {
 
 	var fsClasses = tinyMCE.getParam('font_size_classes');
 	if (fsClasses != '')
-		fsClasses = fsClasses.replace(/\s+/, '').split(',');
+		fsClasses = fsClasses.replace(/\s+/, '').preg_split(',');
 	else
 		fsClasses = null;
 
@@ -3699,7 +3699,7 @@ TinyMCE.prototype.getCSSClasses = function(editor_id, doc) {
 
 					// Can be multiple rules per selector
 					if (selectorText) {
-						var rules = selectorText.split(',');
+						var rules = selectorText.preg_split(',');
 						for (var c=0; c<rules.length; c++) {
 							// Invalid rule
 							if (rules[c].indexOf(' ') != -1 || rules[c].indexOf(':') != -1 || rules[c].indexOf('mceItem') != -1)

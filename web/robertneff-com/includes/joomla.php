@@ -1099,7 +1099,7 @@ http://developer.joomla.org/sf/go/artf1710?nav=1
 			$this->_db->query();
 
 			// tease out the last element of the domain
-			$tldomain = split( "\.", $domain );
+			$tldomain = preg_split( "\.", $domain );
 			$tldomain = $tldomain[count( $tldomain )-1];
 
 			if (is_numeric( $tldomain )) {

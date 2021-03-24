@@ -60,7 +60,7 @@ class dom_xmlrpc_base64 {
 	* @return mixed The RFC2045 chunked string
 	*/
 	function convertToRFC2045($stringData){
-		return chunk_split($stringData);
+		return chunk_preg_split($stringData);
 	} //convertToRFC2045
 
 	/**
@@ -70,7 +70,7 @@ class dom_xmlrpc_base64 {
 	*/
 	function &encode($binaryData) {
 		//static conversion function
-		return chunk_split(base64_encode($binaryData));
+		return chunk_preg_split(base64_encode($binaryData));
 	} //encode
 
 	/**

@@ -29,7 +29,7 @@ if ( !$cur_template ) {
 // HTML Output
 
 // needed to seperate the ISO number from the language file constant _ISO
-$iso = split( '=', _ISO );
+$iso = preg_split( '=', _ISO );
 // xml prolog
 echo '<?xml version="1.0" encoding="'. $iso[1] .'"?' .'>';
 ?>

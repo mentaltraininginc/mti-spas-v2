@@ -53,7 +53,7 @@ function feedFrontpage( $showFeed ) {
 	$params = new mosParameters( $component->params );
 
 	$now 	= date( 'Y-m-d H:i:s', time() + $mosConfig_offset * 60 * 60 );
-	$iso 	= split( '=', _ISO );
+	$iso 	= preg_split( '=', _ISO );
 
 	// parameter intilization
 	$info[ 'date' ] 		= date( 'r' );
@@ -195,7 +195,7 @@ function feedFrontpage( $showFeed ) {
 		if ( $info[ 'limit_text' ] ) {
 			if ( $info[ 'text_length' ] ) {
 				// limits description text to x words
-				$item_description_array = split( ' ', $item_description );
+				$item_description_array = preg_split( ' ', $item_description );
 				$count = count( $item_description_array );
 				if ( $count > $info[ 'text_length' ] ) {
 					$item_description = '';

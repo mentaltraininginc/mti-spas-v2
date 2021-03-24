@@ -1185,7 +1185,7 @@ class MBOXCreator extends FeedCreator {
 
 	function qp_enc($input = "", $line_max = 76) {
 		$hex = array('0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F');
-		$lines = preg_split("/(?:\r\n|\r|\n)/", $input);
+		$lines = preg_preg_split("/(?:\r\n|\r|\n)/", $input);
 		$eol = "\r\n";
 		$escape = "=";
 		$output = "";
@@ -1235,7 +1235,7 @@ class MBOXCreator extends FeedCreator {
 			$feed.= "Date: ".$itemDate->rfc822()."\n";
 			$feed.= "Subject: ".MBOXCreator::qp_enc(FeedCreator::iTrunc($this->items[$i]->title,100))."\n";
 			$feed.= "\n";
-			$body = chunk_split(MBOXCreator::qp_enc($this->items[$i]->description));
+			$body = chunk_preg_split(MBOXCreator::qp_enc($this->items[$i]->description));
 			$feed.= preg_replace("~\nFrom ([^\n]*)(\n?)~","\n>From $1$2\n",$body);
 			$feed.= "\n";
 			$feed.= "\n";

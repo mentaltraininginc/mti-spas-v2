@@ -34,7 +34,7 @@ if (!defined( '_MOS_MAINMENU_MODULE' )) {
 			case 'component_item_link':
 			break;
 			case 'content_item_link':
-			$temp = split("&task=view&id=", $mitem->link);
+			$temp = preg_split("&task=view&id=", $mitem->link);
 			$mitem->link .= '&Itemid='. $mainframe->getItemid($temp[1]);
 			break;
 			case 'url':

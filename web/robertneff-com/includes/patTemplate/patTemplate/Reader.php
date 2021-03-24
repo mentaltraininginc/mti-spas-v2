@@ -355,7 +355,7 @@ class patTemplate_Reader extends patTemplate_Module
 		 */
 		$regexp	=	'/(<(\/?)([[:alnum:]]+):([[:alnum:]]+)[[:space:]]*([^>]*)>)/im';
 
-		$tokens	=	preg_split( $regexp, $string, -1, PREG_SPLIT_DELIM_CAPTURE );
+		$tokens	=	preg_preg_split( $regexp, $string, -1, PREG_SPLIT_DELIM_CAPTURE );
 
 		/**
 		 * the first token is always character data

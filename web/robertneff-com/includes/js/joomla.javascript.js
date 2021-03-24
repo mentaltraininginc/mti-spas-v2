@@ -232,7 +232,7 @@ function chgSelectedValue( frmName, srcListName, value ) {
 function showImageProps(base_path) {
 	form = document.adminForm;
 	value = getSelectedValue( 'adminForm', 'imagelist' );
-	parts = value.split( '|' );
+	parts = value.preg_split( '|' );
 	form._source.value = parts[0];
 	setSelectedValue( 'adminForm', '_align', parts[1] || '' );
 	form._alt.value = parts[2] || '';

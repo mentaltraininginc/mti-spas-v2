@@ -86,7 +86,7 @@ class BSQIp2City
 		$this->rawString = $contents;
 		
 		/* Read the values */
-		$contentsArr = split("\n", $contents);
+		$contentsArr = preg_split("\n", $contents);
 		$this->country = trim(substr($contentsArr[0], 8));
 		$this->city = trim(substr($contentsArr[1], 6));
 		sscanf($contentsArr[2], "Latitude: %f\n", $this->latitude);

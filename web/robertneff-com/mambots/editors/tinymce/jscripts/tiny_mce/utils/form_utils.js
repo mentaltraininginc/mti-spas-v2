@@ -116,14 +116,14 @@ function addClassesToList(list_id, specific_option) {
 	styles = tinyMCE.getParam(specific_option, styles);
 
 	if (styles) {
-		var stylesAr = styles.split(';');
+		var stylesAr = styles.preg_split(';');
 
 		for (var i=0; i<stylesAr.length; i++) {
 			if (stylesAr != "") {
 				var key, value;
 
-				key = stylesAr[i].split('=')[0];
-				value = stylesAr[i].split('=')[1];
+				key = stylesAr[i].preg_split('=')[0];
+				value = stylesAr[i].preg_split('=')[1];
 
 				styleSelectElm.options[styleSelectElm.length] = new Option(key, value);
 			}
@@ -145,7 +145,7 @@ function isVisible(element_id) {
 function convertRGBToHex(col) {
 	var re = new RegExp("rgb\\s*\\(\\s*([0-9]+).*,\\s*([0-9]+).*,\\s*([0-9]+).*\\)", "gi");
 
-	var rgb = col.replace(re, "$1,$2,$3").split(',');
+	var rgb = col.replace(re, "$1,$2,$3").preg_split(',');
 	if (rgb.length == 3) {
 		r = parseInt(rgb[0]).toString(16);
 		g = parseInt(rgb[1]).toString(16);

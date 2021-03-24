@@ -48,7 +48,7 @@ var colors = new Array(
 function convertRGBToHex(col) {
 	var re = new RegExp("rgb\\s*\\(\\s*([0-9]+).*,\\s*([0-9]+).*,\\s*([0-9]+).*\\)", "gi");
 
-	var rgb = col.replace(re, "$1,$2,$3").split(',');
+	var rgb = col.replace(re, "$1,$2,$3").preg_split(',');
 	if (rgb.length == 3) {
 		r = parseInt(rgb[0]).toString(16);
 		g = parseInt(rgb[1]).toString(16);

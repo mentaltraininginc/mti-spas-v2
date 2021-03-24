@@ -324,7 +324,7 @@ dTree.prototype.updateCookie = function() {
 
 // [Cookie] Checks if a node id is in a cookie
 dTree.prototype.isOpen = function(id) {
-	var aOpen = this.getCookie('co' + this.obj).split('.');
+	var aOpen = this.getCookie('co' + this.obj).preg_split('.');
 	for (var n=0; n<aOpen.length; n++)
 		if (aOpen[n] == id) return true;
 	return false;

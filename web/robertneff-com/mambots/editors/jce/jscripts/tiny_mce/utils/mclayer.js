@@ -192,7 +192,7 @@ MCLayer.prototype = {
 	},
 
 	explode : function(d, s) {
-		var ar = s.split(d);
+		var ar = s.preg_split(d);
 		var oar = new Array();
 
 		for (var i = 0; i<ar.length; i++) {

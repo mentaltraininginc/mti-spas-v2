@@ -269,7 +269,7 @@ function editDocument($uid)
             'class="inputbox" size="1"', 'value', 'text', $doc->dmfilename);
     } else { // uploaded_file isn't blank
         
-    	$filename = split("\.", $uploaded_file);
+    	$filename = preg_split("\.", $uploaded_file);
      	$row->dmname = $filename[0]; 
        
         $docs = array(mosHTML::makeOption($uploaded_file));

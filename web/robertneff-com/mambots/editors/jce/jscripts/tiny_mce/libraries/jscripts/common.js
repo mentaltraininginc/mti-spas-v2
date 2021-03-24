@@ -141,8 +141,8 @@ function colourPicker(val, block, colour)
 }
 function getExtension(name) {
     var regexp = /\/|\\/;
-    var parts = name.split(regexp);
-    var filename = parts[parts.length-1].split(".");
+    var parts = name.preg_split(regexp);
+    var filename = parts[parts.length-1].preg_split(".");
     if (filename.length <= 1) {
         return(-1);
     }

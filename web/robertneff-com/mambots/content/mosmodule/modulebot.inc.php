@@ -30,7 +30,7 @@ class modulebot {
   function insertBots( $textin, $bots ) {
 
 		// collect the text
-		$text = preg_split( "/{(modulebot)\s*(.*?)}/i", $textin );
+		$text = preg_preg_split( "/{(modulebot)\s*(.*?)}/i", $textin );
 		$textout = $text[0];
 		
 		//process the bots
